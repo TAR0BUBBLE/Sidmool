@@ -19,7 +19,7 @@ body {
   align-items: center;
   padding-left: 30px;
   padding-right: 30px;
-  padding-top: 28px;
+  padding-top: 10px;
   padding-bottom: 36px;
   background: #f0ede6;
   font-weight: 700;
@@ -445,7 +445,7 @@ button {
   height: 48px;
   font-size: 18px;
   font-weight: 700;
-  border: 2px solid #1e1e1e;
+  border: 1.5px solid #1e1e1e;
   border-radius: 4px;
   cursor: pointer;
 }
