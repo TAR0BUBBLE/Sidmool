@@ -14,14 +14,15 @@ body {
 }
 
 .header {
+  position: fixed; /* 화면 상단에 고정 */
+  top: 0; /* 최상단 */
+  left: 0;
+  right: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding-left: 30px;
   padding-right: 30px;
-  padding-top: 10px;
-  padding-bottom: 36px;
-  background: #f0ede6;
   font-weight: 700;
   font-size: 18px;
   color: #000;
@@ -59,6 +60,7 @@ button {
 .container {
   width: 80%;
   max-width: 960px;
+  padding-top: 100px;
   margin: 0 auto 50px;
 }
 
