@@ -6,23 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Sidmool</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="../css/style_header.css" />
+    <link rel="stylesheet" href="../css/style_footer.css" />
 </head>
 
 <body>
-    <header class="header">
-        <div class="left-group">
-            <button type="button"><img src="images/Menu.png" alt="메뉴" /></button>
-            <button type="button" class="logo"><img src="images/logo.png" alt="로고" /></button>
-        </div>
-
-        <nav>
-            <ul class="header-icons">
-                <li><button type="button"><img src="images/Search.png" alt="검색" /></button></li>
-                <li><button type="button"><img src="images/User.png" alt="마이페이지" /></button></li>
-                <li><button type="button"><img src="images/Cart.png" alt="장바구니" /></button></li>
-            </ul>
-        </nav>
-    </header>
+    <div id="header-placeholder"></div>
 
 
     <main class="container">
@@ -186,61 +175,20 @@
 
     </main>
 
+    <div id="footer-placeholder"></div>
 
-    <footer>
-        <div class="footer-top">
-            <a href="#" class="footer-logo" aria-label="SIDMOOL 로고">
-                <img src="images/logo.png" alt="SIDMOOL 로고" />
-            </a>
-            <nav class="footer-nav">
-                <a href="#">회사소개</a>
-                <a href="#">개인정보처리방침</a>
-                <a href="#">이용약관</a>
-                <a href="#">이용안내</a>
-                <a href="#">미확인 입금</a>
-                <a href="#">무이자 할부 혜택</a>
-            </nav>
-        </div>
-
-        <div class="footer-main">
-            <div class="footer-col cs-center">
-                <h4 class="footer-h4">CS CENTER</h4>
-                <p class="phone">1577 -9638</p>
-                <p>MON-FRI : AM 9:00 - PM 17:00<br />BREAK : PM 12:00 - 13:00<br />토요일, 일요일, 공휴일은 휴무입니다.</p>
-                <div class="social-icons">
-                    <a href="#" aria-label="페이스북"><img src="images/facebook.png" alt="Facebook" /></a>
-                    <a href="#" aria-label="인스타그램"><img src="images/instagram.png" alt="Instagram" /></a>
-                    <a href="#" aria-label="유튜브"><img src="images/youtube.png" alt="YouTube" /></a>
-                    <a href="#" aria-label="카카오톡"><img src="images/kakakotalk.png" alt="KakaoTalk" /></a>
-                    <a href="#" aria-label="네이버카페"><img src="images/naverCafe.png" alt="Blog" /></a>
-                </div>
-            </div>
-
-            <div class="footer-col company-info">
-                <h4 class="footer-h4">COMPANY INFO</h4>
-                <p>주식회사 시드물 &nbsp;&nbsp;&nbsp;&nbsp; 대표 : 민병권 &nbsp;&nbsp;&nbsp;&nbsp; 개인정보책임자 : 박소진</p>
-                <p>대전시 중구 안영로 42 (안영동) &nbsp;&nbsp;&nbsp;&nbsp; 사업자등록번호 : 305-81-94469</p>
-                <p>통신판매신고번호 : 제2008-대전중구-0247호</p>
-                <p>건강기능식품일반판매업 : 제 2007-0233493호</p>
-                <p>건강기능식품유통전문판매업 : 제 2012-0233418호</p>
-                <p>화장품 제조판매업 : 등록필증 제 1163호</p>
-                <p>대표메일 : help@sidmool.com</p>
-            </div>
-
-            <div class="footer-col bank-info">
-                <h4 class="footer-h4">BANK INFO</h4>
-                <p>예금주 : (주)시드물</p>
-                <p>국민은행 : 460001-04-214514</p>
-                <p>농협은행 : 355-0002-8749-13</p>
-                <p>하나은행 : 643-910004-62604</p>
-                <p>우리은행 : 1005-902-241888</p>
-                <p>우체국은행 : 310037-01-011233</p>
-                <p>기업은행 : 143-122078-01-015</p>
-                <p>부산은행 : 101-2047-1354-09</p>
-            </div>
-        </div>
-    </footer>
 
 </body>
 
+<script>
+    // header 로드
+        fetch('../header.html')
+            .then(r => r.text())
+            .then(t => document.querySelector('#header-placeholder').innerHTML = t);
+
+        // footer 로드
+        fetch('../footer.html')
+            .then(r => r.text())
+            .then(t => document.querySelector('#footer-placeholder').innerHTML = t);
+</script>
 </html>

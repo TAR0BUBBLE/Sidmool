@@ -1,0 +1,52 @@
+* {
+  box-sizing: border-box;
+  font-family: "Noto Sans KR", sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+.header {
+  position: fixed; /* 화면 상단에 고정 */
+  z-index: 9999;
+  top: 0; /* 최상단 */
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 30px;
+  padding-right: 30px;
+  font-weight: 700;
+  font-size: 18px;
+  color: #000;
+}
+
+.header .logo {
+  padding-bottom: 13px;
+}
+
+.header .logo img {
+  width: 150px; /* 원하는 너비로 조절 */
+  height: auto; /* 비율 유지 */
+  display: block; /* inline img 기본 여백 제거 */
+}
+
+.left-group {
+  display: flex;
+  align-items: center;
+  gap: 20px; /* 메뉴 버튼과 로고 간 간격을 조절 */
+}
+
+.header-icons {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+button {
+  border: none;
+  background: transparent;
+  outline: none;
+  cursor: pointer;
+}

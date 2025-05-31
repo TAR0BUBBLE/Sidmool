@@ -1,0 +1,377 @@
+* {
+  box-sizing: border-box;
+  font-family: "Noto Sans KR", sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+body {
+  background: #f3eee2;
+  line-height: 1.5;
+  font-size: 14px;
+}
+
+/* ───── Hero(배너) 영역 ───── */
+.hero {
+  position: relative; /* 고정 header 높이 만큼 */
+  height: 960px; /* 배너 이미지 높이 고정 (ex: 960px) */
+}
+
+.hero img#hero-img {
+  width: 100%;
+  height: 100%; /* 높이 꽉 채움 */
+  object-fit: cover; /* 이미지 비율 유지하며 영역 채움 */
+  display: block;
+  border-radius: 4px;
+  transition: opacity 0.7s ease-in-out;
+  opacity: 1; /* 초기 불투명 */
+}
+
+/* 화살표 버튼 */
+.hero-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.hero-arrow img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.hero-arrow.prev {
+  left: 25px;
+}
+
+.hero-arrow.next {
+  right: 25px;
+}
+
+.hero-arrow:hover img {
+  filter: brightness(1.2);
+}
+
+/* -------------------카테고리 메뉴 바------------------- */
+/* 사이드 메뉴 기본 숨김 및 슬라이드 준비 */
+.side-menu {
+  position: fixed;
+  top: 0;
+  left: -310px; /* 메뉴가 화면 밖으로 숨겨짐 */
+  width: 310px;
+  height: 100vh;
+  background-color: #f9f7f0;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+  transition: left 0.3s ease;
+  padding: 20px;
+  z-index: 9998;
+  overflow-y: auto;
+}
+
+/* 메뉴가 열린 상태 */
+.side-menu.open {
+  left: 0;
+}
+
+/* 메뉴 리스트 스타일 */
+.side-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  margin-left: 12px;
+  margin-top: 80px;
+}
+
+.side-menu li {
+  padding: 20px 0;
+  font-weight: 700;
+  font-size: larger;
+  font-style: bold;
+  cursor: pointer;
+}
+
+/* 햄버거 메뉴 버튼 (header.html에서 적절히 지정) */
+.menu-btn {
+  cursor: pointer;
+}
+
+/* -----------------Best Product----------------- */
+.bestandnew-product {
+  padding: 100px 100px 60px 100px; /* 위쪽과 오른쪽 여유 더 주기 */
+  /* background-color: red; */
+  text-align: center;
+  max-width: 1728px;
+  margin: 0 auto; /* 가운데 정렬 */
+  height: 960px; /* 배너 이미지 높이와 같게 맞춤 */
+  box-sizing: border-box;
+  overflow-y: auto; /* 내용이 많으면 스크롤 가능 */
+}
+
+.bestandnew-product h2 {
+  font-weight: 700;
+  font-size: 35px;
+  color: #234214; /* 어두운 녹색 */
+  margin-top: 10px;
+  margin-bottom: 90px;
+  text-align: center;
+}
+
+.product-list {
+  display: flex;
+  overflow-x: auto;
+  cursor: grab; /* 드래그 가능하다는 시각적 표시 */
+  gap: 20px;
+  padding-bottom: 10px; /* 스크롤바 공간 확보용 */
+  -webkit-overflow-scrolling: touch; /* 모바일 부드러운 스크롤 */
+}
+
+.product-list:active {
+  cursor: grabbing;
+}
+
+.product-item {
+  /* background-color: #f9f7f1; */
+  flex: 0 0 auto; /* 고정 너비 유지 */
+  width: 300px; /* 예시 너비 */
+  padding: 24px 16px;
+  width: 23%; /* 4개 상품 균등 배치 */
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+
+.product-item img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+  border-radius: 4px;
+}
+
+.product-name {
+  font-weight: 700;
+  font-size: 17px;
+  margin-bottom: 8px;
+  color: #5a4f3b;
+}
+
+.product-price {
+  font-weight: 700;
+  font-size: 18px;
+  color: #234214;
+}
+
+.old-price {
+  text-decoration: line-through;
+  color: #999999;
+  margin-right: 8px;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.sale-price {
+  color: #234214;
+  font-weight: 700;
+  font-size: 18px;
+  margin-right: 8px;
+}
+
+.sale-percent {
+  color: #d67224;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+/* 반응형: 모바일에서 2열로 변경
+@media (max-width: 768px) {
+  .product-list {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .product-item {
+    width: 48%;
+  }
+}*/
+
+/* 모바일은 한 열 */
+@media (max-width: 480px) {
+  .product-item {
+    width: 100%;
+  }
+}
+
+/* -------------Recommended Product----------- */
+.recommended-product {
+  max-width: 1728px;
+  height: 960px; /* 배너, best-product와 동일 높이 */
+  margin: 0 auto;
+  padding: 100px 100px 60px 100px;
+  box-sizing: border-box;
+  background-color: #f3eee2;
+  color: #234214;
+}
+
+.recommended-product h2 {
+  font-weight: 700;
+  font-size: 28px;
+  margin-top: 80px;
+  margin-bottom: 40px;
+}
+
+.recommended-product h2 strong {
+  color: #8ba63c; /* 강조 색상 */
+  font-size: 42px;
+}
+
+/* 컨텐츠 영역을 좌우로 나눔 */
+.recommended-content {
+  display: flex;
+  gap: 70px;
+}
+
+/* 왼쪽 이미지 영역 */
+.recommended-image {
+  flex: 1;
+  /* background-color: #dbe7e9; 사진 배경색과 유사 */
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.recommended-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+  object-fit: contain;
+}
+
+/* 오른쪽 영역 */
+.recommended-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* 필터 버튼 그룹 */
+.filter-buttons {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.filter-buttons button {
+  background-color: #dcd9cc;
+  border: none;
+  border-radius: 12px;
+  padding: 10px 14px;
+  font-size: 16px;
+  color: #454545;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.filter-buttons button:hover,
+.filter-buttons button:focus {
+  background-color: #b9db56;
+  color: white;
+  outline: none;
+}
+
+/* 랭킹 리스트 */
+.recommended-list {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  overflow-y: auto;
+  padding-right: 10px; /* 스크롤바 여백 */
+}
+
+/* 개별 아이템 */
+.recommended-item {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 15px;
+}
+
+.rank {
+  font-size: 30px;
+  font-weight: 700;
+  margin-left: 20px;
+  margin-right: 20px;
+  width: 30px;
+  color: #5a4f3b;
+  flex-shrink: 0;
+}
+
+.recommended-item img {
+  width: 110px;
+  height: auto;
+  margin-right: 20px;
+  border-radius: 4px;
+  flex-shrink: 0;
+}
+
+.product-info {
+  flex: 1;
+  text-align: left;
+}
+
+.product-name {
+  font-weight: 700;
+  font-size: 18px;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.product-price {
+  font-weight: 700;
+  color: #234214;
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.product-comments {
+  display: flex;
+  align-items: center;
+  margin-top: 30px;
+  font-size: 15px;
+  color: #666;
+}
+
+.product-comments img {
+  width: 17px;
+  height: 17px;
+  margin-right: 5px;
+}
+
+/* -------------Company Campaign----------- */
+.company-campaign {
+  max-width: 1728px;
+  height: 960px; /* 배너 및 다른 섹션 높이와 동일 */
+  margin: 0 auto;
+  box-sizing: border-box;
+  align-items: center;
+  text-align: center;
+  background-color: #f3eee2;
+}
+
+.company-campaign img {
+    margin-top: 85px;
+    margin-bottom: 25px;
+}
+
+.company-campaign h3 {
+    color: #3e1e00;
+    margin-bottom: 8px;
+}

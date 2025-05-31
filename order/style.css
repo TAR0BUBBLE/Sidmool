@@ -8,55 +8,12 @@
 }
 
 body {
-  background: #f0ede6;
+  background: #f3eee2;
   line-height: 1.5;
   font-size: 14px;
 }
 
-.header {
-  position: fixed; /* 화면 상단에 고정 */
-  top: 0; /* 최상단 */
-  left: 0;
-  right: 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-left: 30px;
-  padding-right: 30px;
-  font-weight: 700;
-  font-size: 18px;
-  color: #000;
-}
-
-.header .logo {
-  padding-bottom: 13px;
-}
-
-.header .logo img {
-  width: 150px; /* 원하는 너비로 조절 */
-  height: auto; /* 비율 유지 */
-  display: block; /* inline img 기본 여백 제거 */
-}
-
-.left-group {
-  display: flex;
-  align-items: center;
-  gap: 20px; /* 메뉴 버튼과 로고 간 간격을 조절 */
-}
-
-.header-icons {
-  list-style: none;
-  display: flex;
-  gap: 25px;
-}
-
-button {
-  border: none;
-  background: transparent;
-  outline: none;
-  cursor: pointer;
-}
-
+/* -----------main------------- */
 .container {
   width: 80%;
   max-width: 960px;
@@ -103,7 +60,7 @@ button {
 
 /* ------------배송 정보------------- */
 .shipping-info {
-  background-color: #f9f7f0;
+  background-color: #f9f7f1;
   padding: 24px 32px;
   border-radius: 6px;
   font-size: 14px;
@@ -460,110 +417,4 @@ button {
 }
 .btn-submit:hover {
   background: #a8c94c;
-}
-
-/* ----------------footer----------------- */
-footer {
-  background-color: #f5f1e9;
-  padding: 40px 80px 50px;
-  color: #343f14;
-  font-family: "Noto Sans KR", sans-serif;
-  font-size: 13px;
-  line-height: 1.6;
-  user-select: none;
-}
-
-/* 상단 로고 + 네비 */
-.footer-top {
-  display: flex;
-  align-items: center;
-  gap: 60px;
-  margin-bottom: 40px;
-}
-
-.footer-logo img {
-  width: 140px;
-  height: auto;
-}
-
-.footer-nav a {
-  margin-right: 30px;
-  color: #343f14;
-  text-decoration: none;
-  font-weight: 400;
-  font-size: 14px;
-  transition: color 0.3s;
-}
-
-.footer-nav a:hover {
-  color: #a4bc3e;
-}
-
-.footer-h4 {
-  color: #1f3200;
-  font-size: 32px;
-  font-family: Inter;
-  font-weight: 600;
-  line-height: 48px;
-}
-
-/* 본문 3컬럼 */
-.footer-main {
-  display: flex;
-  justify-content: space-between;
-  gap: 40px;
-  flex-wrap: wrap;
-}
-
-.footer-col {
-  flex: 1;
-  min-width: 240px;
-}
-
-/* CS CENTER 컬럼 */
-.cs-center h4,
-.company-info h4,
-.bank-info h4 {
-  font-weight: 700;
-  font-size: 18px;
-  margin-bottom: 18px;
-}
-
-.cs-center .phone {
-  font-weight: 700;
-  font-size: 22px;
-  color: #a4bc3e;
-  margin-bottom: 20px;
-}
-
-/* 소셜 아이콘 */
-.social-icons {
-  margin-top: 20px;
-  display: flex;
-  gap: 18px;
-}
-.social-icons a img {
-  width: 24px;
-  height: 24px;
-  filter: brightness(0) saturate(100%) invert(26%) sepia(36%) saturate(434%)
-    hue-rotate(76deg) brightness(89%) contrast(88%);
-  transition: filter 0.3s ease;
-}
-.social-icons a:hover img {
-  filter: brightness(0) saturate(100%) invert(53%) sepia(70%) saturate(502%)
-    hue-rotate(93deg) brightness(99%) contrast(93%);
-}
-
-/* 회사정보 컬럼 */
-.company-info p {
-  margin-bottom: 12px;
-  font-weight: 400;
-  color: #343f14;
-}
-
-/* 은행정보 컬럼 */
-.bank-info p {
-  margin-bottom: 12px;
-  font-weight: 400;
-  color: #343f14;
 }
