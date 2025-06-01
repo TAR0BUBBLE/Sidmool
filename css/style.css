@@ -60,8 +60,6 @@ body {
   filter: brightness(1.2);
 }
 
-
-
 /* -----------------Best Product----------------- */
 .bestandnew-product {
   padding: 100px 100px 60px 100px; /* 위쪽과 오른쪽 여유 더 주기 */
@@ -123,7 +121,7 @@ body {
 .product-price {
   font-weight: 700;
   font-size: 18px;
-  color: #234214;
+  color: #1f3e00;
 }
 
 .old-price {
@@ -293,7 +291,7 @@ body {
   color: #333;
 }
 
-.product-price {
+.recommended-item .product-price {
   font-weight: 700;
   color: #234214;
   font-size: 16px;
@@ -326,11 +324,11 @@ body {
 }
 
 .company-campaign img {
-    margin-top: 85px;
-    margin-bottom: 25px;
+  margin-top: 85px;
+  margin-bottom: 25px;
 }
 
 .company-campaign h3 {
-    color: #3e1e00;
-    margin-bottom: 8px;
+  color: #3e1e00;
+  margin-bottom: 8px;
 }
