@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Sidmool</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="/css/style_header.css" />
+    <link rel="stylesheet" href="/css/style_footer.css" />
+</head>
+
+
+<body>
+    <div id="header-placeholder"></div>
+
+    <div class="container">
+        <div class="product">
+            <img src="images/cleansingMilk.png" alt="닥터트럽 클렌징 밀크" id="cleansingMilk"/>
+            <div class="product-info">
+                <div class="title-row">
+                    <h2>닥터트럽 클렌징 밀크 200ml/500ml</h2>
+                    <div class="icon-group">
+                        <img class="icon" src="images/share.png" alt="공유" />
+                        <img class="icon" src="images/heart.png" alt="찜" />
+                    </div>
+                </div>
+                
+                <hr>
+
+                <div class="product-detail">
+                    <div class="row">
+                        <span class="label">가격</span>
+                        <span><del>17,600원</del> <strong class="sale-price">13,600원</strong></span>
+                    </div>
+
+                    <div class="row">
+                        <span class="label">옵션</span>
+                        <select class="dropdown">
+                            <option>닥터트럽 클렌징 밀크 500ml (+12,400원)</option>
+                            <!-- 다른 옵션도 추가 가능 -->
+                        </select>
+                    </div>
+
+                    <div class="row">
+                        <span class="label">수량</span>
+                        <div class="quantity">
+                            <button type="button">-</button>
+                            <span>1</span>
+                            <button type="button">+</button>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <span class="label">적립</span>
+                        <span>2%</span>
+                    </div>
+                </div>
+
+                <hr>
+
+                <p class="all-price">총 상품금액: <strong>26,000원</strong>
+                </p>
+
+
+                <div class="buttons">
+                    <button class="cart">장바구니</button>
+                    <button class="buy">바로 구매</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- 탭 메뉴 -->
+        <div class="tab-menu">
+            <span class="tab active">상세 정보</span>
+            <span class="tab">상품 후기</span>
+            <span class="tab">배송 정보</span>
+            <span class="tab">Q&A</span>
+        </div>
+
+        <!-- 상세 정보 영역 -->
+        <div class="product-detail-section">
+            <h3 class="productSectionTitle">상세 정보</h3>
+            <hr>
+
+            <div class="info-row">
+                <span class="label">사용 기한</span>
+                <span class="value">클렌징 제품 개봉 후 6개월 이내</span>
+            </div>
+            <hr>
+
+            <div class="info-row">
+                <span class="label">전성분</span>
+                <span class="value">▼</span>
+            </div>
+            <hr />
+
+            <!-- 수상 이력 리스트 -->
+            <ul class="award-list">
+                <li>
+                    <img src="images/hwahae.png" alt="hwahae" />
+                    <span>2020 화해 어워드 클렌징 로션/크림 부문 1위</span>
+                </li>
+                <li>
+                    <img src="images/powderroom.png" alt="powderroom" />
+                    <span>2025년 파우더룸 클렌징로션 부문 1위</span>
+                </li>
+                <li>
+                    <img src="images/sidmoolPick.png" alt="sidmoolPick" />
+                    <span>2022 시드몰 베스트 어워드 클렌징젤 1위</span>
+                </li>
+                <li>
+                    <img src="images/completed.png" alt="completed" />
+                    <span>여드름성 피부 적합 테스트 완료</span>
+                </li>
+            </ul>
+            <hr>
+
+            <img src="images/warning.png" alt="warning" id="warning"/>
+
+            <!--제품 상세 설명-->
+            <div class="product-info-section">
+                <!-- 제품 소개 -->
+                <h2 class="section-title">제품 소개</h2>
+                <div class="features">
+                    <div class="feature-box">
+                        <img src="images/icon-water.png" alt="촉촉한 클렌징">
+                        <p>촉촉하고 순한<br> 딥 클렌징</p>
+                    </div>
+                    <div class="feature-box">
+                        <img src="images/icon-nose.png" alt="모공 관리">
+                        <p>모공 관리를<br> 위한 레시피</p>
+                    </div>
+                    <div class="feature-box">
+                        <img src="images/icon-skin.png" alt="장벽 관리">
+                        <p>피부 장벽<br>관리에 도움</p>
+                    </div>
+                    <div class="feature-box">
+                        <img src="images/icon-skin2.png" alt="거친 피부">
+                        <p>거친 피부를<br>매끄럽게</p>
+                    </div>
+                </div>
+
+                <!-- 제품 용량 -->
+                <h2 class="section-title">제품 용량</h2>
+                <div class="volume-wrap">
+                    <div class="volume-item">
+                        <img src="images/volume.png" alt="200ml" id="volume200">
+                        <p class="volume-p">200ml</p>
+                    </div>
+                    <div class="volume-item">
+                        <img src="images/volume.png" alt="500ml" id="volume500">
+                        <p class="volume-p">500ml</p>
+                    </div>
+                </div>
+
+                <!-- 제품 특징 -->
+                <h2 class="section-title">제품 특징</h2>
+                <div class="feature-list-wrap">
+                    <ul class="feature-list">
+                        <li>식물유래 <strong>데실글루코사이드</strong>로 마일드한 클렌징</li>
+                        <li><strong>천연보습인자(NMF)</strong>, 판테놀로 풍부한 보습과 매끄러움</li>
+                        <li><strong>모공에 부담이 없는 성분들</strong>과 밀크제형</li>
+                        <li>클렌징과 함께하는 <strong>보습 영양 마사지</strong></li>
+                        <li><strong>2차 세안제가 필요없는</strong> Type</li>
+                        <li><strong>남녀노소, 온 가족</strong>이 모두 사용 가능</li>
+                        <li><strong>썬크림 지우는 용도</strong>로 사용 가능</li>
+                    </ul>
+                </div>
+
+                <!-- 제품 제형 -->
+                <h2 class="section-title">제품 제형</h2>
+                <div class="productTexture-box">
+                    <img src="images/productTexture.png" alt="제품 제형" id="productTexture">
+                    <div class="productTexture-text">
+                        <span class="desc-label">점도</span>
+                        <span class="desc-text">손에 덜은 뒤 기울이면 자연스럽게 흘러 내리는 점도</span>
+                    </div>
+                    <div class="productTexture-text">
+                        <span class="desc-label">향</span>
+                        <span class="desc-text">인위적으로 조정하지 않은 원료 그대로의 유화향</span>
+                    </div>
+                    <div class="productTexture-text">
+                        <span class="desc-label">색</span>
+                        <span class="desc-text">우유와 같이 깨끗한 흰색으로 띔</span>
+                    </div>
+                    <div class="productTexture-text">
+                        <span class="desc-label">거품력</span>
+                        <span class="desc-text">거품이 나지 않는 부드러운 밀크 타입</span>
+                    </div>
+                </div>
+
+                <!-- 제품 사용방법 -->
+                <h2 class="section-title">제품 사용방법</h2>
+                <div class="use-list-wrap">
+                    <ol class="use-list">
+                        <li>깨끗한 손에 적당량을 덜어주세요.</li>
+                        <li>물을 묻히지 않은 얼굴에 고루 바르면서 마사지를 해주세요.</li>
+                        <li><strong>백탁이 심하고 밀착력이 강한 썬크림, 진한 색조, 파운데이션은 좀 더 많은 롤링</strong>을 하셔야 합니다.</li>
+                        <li>롤링으로 충분히 녹여서 제거를 한 뒤에 물로 충분히 씻어내 줍니다.</li>
+                        <li>나에게 맞는 사용량/롤링횟수/클렌징 횟수로 조절해서 사용해주시면 더욱 만족도가 높아집니다.</li>
+                        <li>건조함이 느껴지실 경우 <strong>오일을 함께 섞어 사용</strong>해주시면 더욱 촉촉하게 사용하실 수 있습니다.</li>
+                    </ol>
+                </div>
+
+                <h2 class="section-title">제품 분리배출</h2>
+                <img src="images/recycle.png" alt="분리 배출">
+                <h2 class="section-title">상품 정보 제공고시</h2>
+                <img src="images/information.png" alt="상품정보제공고시" id="information">
+                <hr>
+            </div>
+
+        </div>
+
+        <!-- 상품 후기 영역 -->
+        <div class="product-review-section">
+            <h3 class="productSectionTitle">상품 후기</h3>
+            <hr>
+
+            <div class="review-summary">
+                <div class="chart-box">
+                    <div class="rating">
+                        <div class="rating-box">
+                            <p>상품 만족도</p>
+                            <p class="rating-score"><strong>⭐ 4.9</strong> / 5</p>
+                            <p>25개의 리뷰가 있습니다.</p>
+                            <button class="review-write-btn">리뷰 작성하기</button>
+                        </div>
+
+                        <div class="rating-bars">
+                            <div class="bar">
+                                <div class="bar-graph" style="height: 80%"></div>
+                                <span>5점</span>
+                            </div>
+                            <div class="bar">
+                                <div class="bar-graph" style="height: 30%"></div>
+                                <span>4점</span>
+                            </div>
+                            <div class="bar">
+                                <div class="bar-graph" style="height: 60%"></div>
+                                <span>3점</span>
+                            </div>
+                            <div class="bar">
+                                <div class="bar-graph" style="height: 60%"></div>
+                                <span>2점</span>
+                            </div>
+                            <div class="bar">
+                                <div class="bar-graph" style="height: 60%"></div>
+                                <span>1점</span>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="pie-charts">
+                        <div class="chart">
+                            <img src="images/skinConcern.png" alt="피부 고민">
+                            <p>피부 고민</p>
+                        </div>
+                        <div class="chart">
+                            <img src="images/skinType.png" alt="피부 타입">
+                            <p>피부 타입</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 필터와 검색 -->
+                <div class="review-filter">
+                    <span><strong>리뷰</strong> 100</span>
+                    <div class="review-filter-box">
+                        <label><input type="checkbox"> 포토/동영상 리뷰만 모아보기</label>
+                        <select class="recomend"><option>추천순</option></select>
+                        <input type="text" placeholder="리뷰 키워드 검색">
+                    </div>
+                </div>
+
+                <div class="review-filter-select">
+                    <select><option>별점</option></select>
+                    <select><option>피부 고민</option></select>
+                    <select><option>피부타입</option></select>
+                </div>
+
+                <!-- 실제 리뷰 -->
+                <div class="review-list">
+                    <div class="review-item">
+                        <p><span class="star">★★★★★</span><strong>피부 고민</strong> 건조 &nbsp;&nbsp; <strong>피부 타입</strong> 복합성</p>
+                        <div class="review-main">
+                            <div class="review-nameDate">
+                                <span class="review-name">name</span>
+                                <span class="review-date">2025-05-12</span>                            
+                            </div>
+                            <p class="review-content">대박 좋아요 ~!</p>
+                        </div>
+                        <div class="report">
+                            <img src="images/report.png" alt="신고/차단하기">
+                            <button class="report-btn">신고/차단하기</button>
+                        </div>
+                    </div>
+
+                    <div class="review-item">
+                        <p><span class="star">★★★★☆</span><strong>피부 고민</strong> 탄력 &nbsp;&nbsp; <strong>피부 타입</strong> 지성</p>
+                        <div class="review-main">
+                            <div class="review-nameDate">
+                                <span class="review-name">name</span>
+                                <span class="review-date">2025-05-12</span>                            
+                            </div>
+                            <p class="review-content">괜찮네요.</p>
+                            <img src="images/review.png" alt="리뷰 이미지">
+                        </div>
+                        <div class="report">
+                            <img src="images/report.png" alt="신고/차단하기">
+                            <button class="report-btn">신고/차단하기</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+        </div>
+        
+        <!-- 배송 안내 영역 -->
+        <div class="shipping-info">
+            <h3 class="productSectionTitle">배송 안내</h3>
+            <hr>
+            <div class="shipping-row">
+                <div class="label">배송업체</div>
+                <div class="content">우체국 택배(건강주스 제품은 CJ택배 이용)</div>
+            </div>
+            <br>
+
+            <div class="shipping-row">
+                <div class="label">배송비</div>
+                <div class="content">
+                <strong>3000원</strong><br>
+                <p>* 2만원 이상 구입 시 전국 어디든 무료 배송</p>
+                <br>
+                <p>* 해외 배송의 경우 무통장 주문서를 넣어주시고 해외배송 게시판에 남겨주세요.</p>
+                <p>* 상품의 중량 및 배송 국가에 따라 배송비가 별도 산정됩니다.</p>
+                </div>
+            </div>
+            <br>
+
+            <div class="shipping-row">
+                <div class="label">배송 기간</div>
+                <div class="content">
+                휴일, 명절, 공휴일 이후에는 평소보다 1~2일 배송이 지연될 수 있습니다.<br><br>
+                ▪ 월요일 오전 10시<br>
+                ▪ 화~금 낮 1시<br>
+                ▪ 토요일 오전 9시<br><br>
+                이전 결제 완료건은 당일 발송 (공휴일 제외)
+                </div>
+            </div>
+        </div>
+        <hr>
+
+        <!-- 반품/교환 영역 -->
+        <div class="return-info">
+            <h3 class="productSectionTitle">반품/교환 안내</h3>
+            <hr>
+            <div class="return-row">
+                <div class="label">반품/교환 택배비</div>
+                <div class="content">
+                단순 변심에 의한 반품 및 교환인 경우 배송비<br>
+                ▪ 무료배송 <strong>5,000원</strong><br>
+                ▪ 배송비 지불 <strong>2,500원</strong>
+                </div>
+            </div>
+
+            <div class="return-row">
+                <div class="label">반품 신청기준</div>
+                <div class="content">
+                시드물은 반품 들어온 제품 중 개봉 제품은 폐기하고, 개봉하지 않은 제품은 전량 복지관 후원용으로 보내드리고 있습니다.<br>
+                반품, 환불 제품은 절대 재판매하지 않습니다.
+                </div>
+            </div>
+
+            <div class="return-row">
+                <div class="label"></div>
+                <div class="content">
+                <h3>반품/교환 정책</h3>
+                ▪ 제품 받은 날 <strong>7일 이내</strong> 반품/교환/취소/환불 가능 (미개봉)<br>
+                ▪ 제품의 하자 및 오배송인 경우 (<strong>배송비 당사 부담</strong>)<br>
+                ▪ 제품 사용 후 피부 트러블이 발생한 경우<br>
+                – 피부과 진단서 + 1:1 게시판 사진 첨부 (상품 수령 후 20일 이내)
+                </div>
+            </div>
+        </div>
+        <hr>
+
+        <div class="product-qna-section">
+            <h3 class="productSectionTitle">Q&amp;A</h3>
+            <hr>
+
+            <div class="qna-item">
+                <div class="qna-meta">
+                <button class="answered">답변 완료</button>
+                <span class="user">eunsong415</span>
+                <span class="date">2025-5-12</span>
+                </div>
+                <div class="qna-content secret">
+                <span class="lock-icon">🔒</span> 비밀글입니다.
+                </div>
+            </div>
+
+            <div class="qna-item">
+                <div class="qna-meta">
+                <button class="pending">답변 전</button>
+                <span class="user">giddonge1030</span>
+                <span class="date">2025-5-12</span>
+                </div>
+                <div class="qna-content secret">
+                <span class="lock-icon">🔒</span> 비밀글입니다.
+                </div>
+            </div>
+
+            <div class="qna-item">
+                <div class="qna-meta">
+                <button class="pending">답변 전</button>
+                <span class="user">yoonyoonkawaiiii</span>
+                <span class="date">2025-5-12</span>
+                </div>
+                <div class="qna-content">
+                클렌징 잘 지워지나요?
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer-placeholder"></div>
+</body>
+
+<script type="module">
+    const holder = document.getElementById('header-placeholder');
+    // header, footer 불러오기
+    /* ---- fetch & 삽입 ---- */
+    fetch('/header.html')
+        .then(r => r.text())
+        .then(html => {
+            const tpl = document.createElement('template');
+            tpl.innerHTML = html.trim();
+            holder.appendChild(tpl.content);      // 마크업 삽입
+
+            /* ---- (★) header.html 안 <script> 재실행 ---- */
+            execScripts(holder);
+        });
+
+    /* -------------- 헬퍼 -------------- */
+    function execScripts(scope) {
+        scope.querySelectorAll('script').forEach(src => {
+            const s = document.createElement('script');
+            [...src.attributes].forEach(a => s.setAttribute(a.name, a.value));
+            s.textContent = src.textContent;
+            document.head.appendChild(s);
+            src.remove();                         // 메모리 누수 방지
+        });
+    }
+
+    // footer 로드
+    fetch('../footer.html')
+        .then(r => r.text())
+        .then(t => document.querySelector('#footer-placeholder').innerHTML = t);
+</script>
+</html>
