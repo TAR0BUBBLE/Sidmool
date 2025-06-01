@@ -21,6 +21,36 @@
             </ul>
         </nav>
     </header>
+
+    <!-- 사이드 메뉴바 -->
+    <nav id="side-menu" class="side-menu">
+        <ul>
+            <li>New Product</li>
+            <li>Best Product</li>
+            <li class="dropdown-toggle">All Product</li>
+            <li>Skin Fit Ranking</li>
+            <li>Event</li>
+            <li>Brand</li>
+            <li>공지사항</li>
+            <li>F & Q</li>
+            <li>1:1 문의</li>
+        </ul>
+    </nav>
+
+    <script>
+        // IIFE로 즉시 실행
+        (() => {
+            // 자신이 삽입될 컨테이너 안에서만 요소 탐색
+            const root = document.currentScript.closest('#header-placeholder') || document;
+            const menuBtn = root.querySelector('.menu-btn');
+            const sideMenu = document.getElementById('side-menu');
+
+            menuBtn?.addEventListener('click', () => {
+                sideMenu.classList.toggle('open');
+            });
+        })();
+    </script>
+
 </body>
 
 </html>

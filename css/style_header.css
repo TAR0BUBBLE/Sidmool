@@ -50,3 +50,46 @@ button {
   outline: none;
   cursor: pointer;
 }
+
+/* -------------------카테고리 메뉴 바------------------- */
+/* 사이드 메뉴 기본 숨김 및 슬라이드 준비 */
+.side-menu {
+  position: fixed;
+  top: 0;
+  left: -310px; /* 메뉴가 화면 밖으로 숨겨짐 */
+  width: 310px;
+  height: 100vh;
+  background-color: #f9f7f0;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+  transition: left 0.3s ease;
+  padding: 20px;
+  z-index: 9998;
+  overflow-y: auto;
+}
+
+/* 메뉴가 열린 상태 */
+.side-menu.open {
+  left: 0;
+}
+
+/* 메뉴 리스트 스타일 */
+.side-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  margin-left: 12px;
+  margin-top: 80px;
+}
+
+.side-menu li {
+  padding: 20px 0;
+  font-weight: 700;
+  font-size: larger;
+  font-style: bold;
+  cursor: pointer;
+}
+
+/* 햄버거 메뉴 버튼 (header.html에서 적절히 지정) */
+.menu-btn {
+  cursor: pointer;
+}
