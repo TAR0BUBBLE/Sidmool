@@ -6,6 +6,10 @@
   color: #333;
 }
 
+a{
+  text-decoration: none;
+}
+
 .header {
   position: fixed; /* 화면 상단에 고정 */
   z-index: 9999;
