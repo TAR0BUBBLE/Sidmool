@@ -1,11 +1,213 @@
 <!DOCTYPE html>
-<html>
+<html lang="ko">
 
 <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Sidmool</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="/css/style_header.css" />
+    <link rel="stylesheet" href="/css/style_footer.css" />
 </head>
 
 <body>
+    <div id="header-placeholder"></div>
+
+
+    <main class="container">
+        <section class="order-header">
+            <h1>ORDER</h1>
+            <nav class="order-progress">
+                <ul>
+                    <li><span>01 장바구니</span></li>
+                    <li><span>02 주문/결제</span></li>
+                    <li><span>03 주문완료</span></li>
+                </ul>
+            </nav>
+        </section>
+
+        <!-- 배송정보 -->
+        <section class="shipping-info">
+            <div class="shipping-info-header">
+                <h2>배송 정보</h2>
+                <label class="checkbox-row">
+                    <input type="checkbox" checked />
+                    회원 정보와 동일
+                </label>
+            </div>
+
+            <form>
+                <div class="form-row">
+                    <label for="name">이름</label>
+                    <input type="text" id="name" placeholder=" " />
+                </div>
+
+                <div class="form-row phone-row">
+                    <label for="phone1">연락처</label>
+                    <span class="phone-prefix">010</span>
+                    <span>-</span>
+                    <input type="text" id="phone2" />
+                    <span>-</span>
+                    <input type="text" id="phone3" />
+                </div>
+
+                <div class="form-row address-row">
+                    <label for="address1">주소</label>
+                    <input type="text" id="address1" />
+                    <button type="button" class="btn-zipcode">우편 번호</button>
+                </div>
+
+                <div class="form-row">
+                    <label for="address2"></label>
+                    <input type="text" id="address2" />
+                </div>
+
+                <div class="form-row">
+                    <label for="request-message">요청 메시지</label>
+                    <textarea id="request-message"></textarea>
+                </div>
+            </form>
+        </section>
+
+        <!-- 주문 내역 -->
+        <section class="order-list">
+            <h2>주문 내역</h2>
+
+            <ul>
+                <!-- 1-번째 상품 -->
+                <li class="order-item">
+                    <div class="item-img">
+                        <img src="images/cleansingMilk.png" alt="닥터트럽 클렌징 밀크" />
+                    </div>
+
+                    <div class="item-desc">
+                        <strong class="item-name">닥터트럽 클렌징 밀크</strong>
+                        <span class="item-option">옵션&nbsp;:&nbsp;닥터트럽 클렌징 밀크 200ml</span>
+                    </div>
+
+                    <span class="item-count">1개</span>
+                    <span class="item-price">13,600원</span>
+                </li>
+
+                <!-- 2-번째 상품 -->
+                <li class="order-item">
+                    <div class="item-img">
+                        <img src="images/soup.png" alt="어성초 수제 비누" />
+                    </div>
+
+                    <div class="item-desc">
+                        <strong class="item-name">어성초 수제 비누</strong>
+                        <span class="item-option">옵션&nbsp;:&nbsp;어성초 비누</span>
+                    </div>
+
+                    <span class="item-count">1개</span>
+                    <span class="item-price">2,400원</span>
+                </li>
+            </ul>
+        </section>
+
+        <!-- ▼ 주문 내역 섹션 바로 아래에 ▼ -->
+        <section class="payment-area">
+
+            <!-- --- 결제 수단 -------------------------------- -->
+            <div class="payment-method">
+                <h3>결제 수단</h3>
+
+                <div class="methods">
+                    <label><input type="radio" name="pay" checked /> 시드물페이</label>
+                    <label><input type="radio" name="pay" /> 신용카드</label>
+                    <label><input type="radio" name="pay" /> KakaoPay</label>
+                    <label><input type="radio" name="pay" /> tosspay</label>
+                    <label><input type="radio" name="pay" /> 무통장입금</label>
+                    <label><input type="radio" name="pay" /> 가상계좌</label>
+                    <label><input type="radio" name="pay" /> Payco</label>
+                    <label><input type="radio" name="pay" /> 휴대폰 결제</label>
+                </div>
+
+                <select>
+                    <option>카드사 선택</option>
+                    <option>국민카드</option>
+                    <option>신한카드</option>
+                    <option>현대카드</option>
+                    <option>삼성카드</option>
+                </select>
+                <small class="card-info">신용카드 무이자 할부 안내 &gt;</small>
+            </div>
+
+            <!-- --- 결제 내역 -------------------------------- -->
+            <div class="payment-summary">
+                <h3>결제 내역</h3>
+                <table>
+                    <tbody>
+                        <tr>
+                            <th>총 주문 금액</th>
+                            <td>16,000원</td>
+                        </tr>
+                        <tr>
+                            <th>배송비</th>
+                            <td>2,500원</td>
+                        </tr>
+                        <tr>
+                            <th>총 할인 금액</th>
+                            <td>0원</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="total-price">
+                    <span>총 결제예정 금액</span>
+                    <strong>18,500원</strong>
+                </div>
+
+                <div class="agreements">
+                    <label><input type="checkbox" checked /> 결제 정보를 확인하였으며, 구매 진행에 동의합니다.</label>
+                    <label><input type="checkbox" checked /> 이용약관과 개인정보처리방침에 동의합니다.</label>
+                    <label><input type="checkbox" checked /> 주문 상품의 상품명, 가격, 배송정보에 동의합니다.</label>
+                </div>
+            </div>
+        </section>
+
+        <!-- 하단 버튼 -->
+        <div class="btn-row">
+            <button class="btn-cancel">주문 취소</button>
+            <button class="btn-submit">주문하기</button>
+        </div>
+
+    </main>
+
+    <div id="footer-placeholder"></div>
 </body>
+
+<script type="module">
+    const holder = document.getElementById('header-placeholder');
+    // header, footer 불러오기
+    /* ---- fetch & 삽입 ---- */
+    fetch('/header.html')
+        .then(r => r.text())
+        .then(html => {
+            const tpl = document.createElement('template');
+            tpl.innerHTML = html.trim();
+            holder.appendChild(tpl.content);      // 마크업 삽입
+
+            /* ---- (★) header.html 안 <script> 재실행 ---- */
+            execScripts(holder);
+        });
+
+    /* -------------- 헬퍼 -------------- */
+    function execScripts(scope) {
+        scope.querySelectorAll('script').forEach(src => {
+            const s = document.createElement('script');
+            [...src.attributes].forEach(a => s.setAttribute(a.name, a.value));
+            s.textContent = src.textContent;
+            document.head.appendChild(s);
+            src.remove();                         // 메모리 누수 방지
+        });
+    }
+
+    // footer 로드
+    fetch('../footer.html')
+        .then(r => r.text())
+        .then(t => document.querySelector('#footer-placeholder').innerHTML = t);
+</script>
 
 </html>

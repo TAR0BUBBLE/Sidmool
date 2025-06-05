@@ -17,6 +17,8 @@ body {
 .main-container {
   max-width: 1200px;
   margin: 0 auto;
+  margin-top: 100px;
+  margin-bottom: 100px;
   padding: 0 20px;
 }
 
@@ -101,11 +103,10 @@ body {
 }
 
 /* 순위 배지 */
-/* 순위 배지 */
 .rank-badge {
   position: absolute;
-  top: -12px; /* 이미지 영역 위쪽으로 이동 */
-  left: 0;
+  top: 0px;
+  left: 10px;
   background-color: #333;
   color: white;
   font-size: 12px;

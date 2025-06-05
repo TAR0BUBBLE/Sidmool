@@ -2,11 +2,14 @@
 <html lang="ko">
   <head>
     <meta charset="UTF-8" />
-    <title>제품 목록 - 스킨/토너/미스트</title>
+    <title>제품 목록 - 비누/클렌징</title>
     <link rel="stylesheet" href="products.css" />
+    <link rel="stylesheet" href="/css/style_header.css" />
+    <link rel="stylesheet" href="/css/style_footer.css" />
     <script defer src="products.js"></script>
   </head>
   <body>
+    <div id="header-placeholder"></div>
     <div class="breadcrumb">🏠 > 카테고리 > 제품별 > 비누/클렌징</div>
 
     <main class="products-page">
@@ -47,6 +50,7 @@
 
         <!-- JS가 정렬할 대상 전체를 감싸는 container -->
         <div class="product-list product-grid">
+          <a href="/detailed-product/detailed-product.html">
           <div class="product-card">
             <img src="cleansing_image/1X1.png" alt="닥터트럽 클렌징 밀크" />
             <p class="name">닥터트럽 클렌징 밀크</p>
@@ -161,5 +165,38 @@
         </div>
       </section>
     </main>
+     <div id="footer-placeholder"></div>
   </body>
+
+  <script type="module">
+    const holder = document.getElementById('header-placeholder');
+    // header, footer 불러오기
+    /* ---- fetch & 삽입 ---- */
+    fetch('/header.html')
+        .then(r => r.text())
+        .then(html => {
+            const tpl = document.createElement('template');
+            tpl.innerHTML = html.trim();
+            holder.appendChild(tpl.content);      // 마크업 삽입
+
+            /* ---- (★) header.html 안 <script> 재실행 ---- */
+            execScripts(holder);
+        });
+
+    /* -------------- 헬퍼 -------------- */
+    function execScripts(scope) {
+        scope.querySelectorAll('script').forEach(src => {
+            const s = document.createElement('script');
+            [...src.attributes].forEach(a => s.setAttribute(a.name, a.value));
+            s.textContent = src.textContent;
+            document.head.appendChild(s);
+            src.remove();                         // 메모리 누수 방지
+        });
+    }
+
+    // footer 로드
+    fetch('../footer.html')
+        .then(r => r.text())
+        .then(t => document.querySelector('#footer-placeholder').innerHTML = t);
+</script>
 </html>

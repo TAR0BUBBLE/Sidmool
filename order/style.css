@@ -1,0 +1,420 @@
+/* style.css */
+* {
+  box-sizing: border-box;
+  font-family: "Noto Sans KR", sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+body {
+  background: #f3eee2;
+  line-height: 1.5;
+  font-size: 14px;
+}
+
+/* -----------main------------- */
+.container {
+  width: 80%;
+  max-width: 960px;
+  padding-top: 100px;
+  margin: 0 auto 50px;
+}
+
+/* 중앙 정렬 ORDER */
+.order-header h1 {
+  color: black;
+  padding-bottom: 50px;
+  margin-bottom: 0px;
+  text-align: center;
+  font-size: 30px;
+  font-family: Inter;
+  font-weight: 500;
+  line-height: 60px;
+}
+
+.order-progress {
+  margin-left: 690px;
+  margin-bottom: 10px;
+}
+
+.order-progress ul {
+  list-style: none;
+  display: flex;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  font-weight: 400;
+}
+
+.order-progress ul li:not(:last-child)::after {
+  content: ">";
+  margin-left: 8px;
+  color: #666;
+}
+
+.order-progress ul li:nth-child(2) span {
+  font-weight: 700;
+  color: #000;
+}
+
+/* ------------배송 정보------------- */
+.shipping-info {
+  background-color: #f9f7f1;
+  padding: 24px 32px;
+  border-radius: 6px;
+  font-size: 14px;
+  color: #1a1a1a;
+  user-select: none;
+}
+
+.shipping-info-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #2b2b2b;
+  padding-bottom: 10px;
+  margin-bottom: 24px;
+}
+
+.shipping-info-header h2 {
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.checkbox-row {
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  font-size: 13px;
+  gap: 6px;
+}
+
+.checkbox-row input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  accent-color: #9fbb3d;
+  cursor: pointer;
+}
+
+/* form rows */
+.form-row {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #2b2b2b;
+  padding: 16px 0;
+}
+
+.form-row label {
+  flex-basis: 80px;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.form-row input[type="text"],
+.form-row textarea {
+  border: none;
+  user-select: none;
+  padding: 10px;
+  border-radius: 3px;
+  font-size: 14px;
+  resize: none;
+  width: 100%;
+}
+
+.form-row textarea {
+  height: 140px;
+  margin-left: 80px;
+}
+
+.form-row.phone-row input[type="text"] {
+  width: 80px;
+  margin-left: 10px;
+  margin-right: 6px;
+}
+
+.phone-prefix {
+  margin-left: 10px;
+  font-weight: 700;
+  font-size: 14px;
+  color: #000;
+}
+
+.form-row.phone-row span {
+  font-weight: 700;
+  font-size: 18px;
+  margin-right: 6px;
+  user-select: none;
+}
+
+.address-row {
+  gap: 12px;
+}
+
+.address-row input[type="text"] {
+  width: 70%;
+  margin-left: 0;
+}
+
+.address-row .btn-zipcode {
+  width: 80px;
+  height: 34px;
+  background-color: #eee;
+  border: 1px solid #999;
+  border-radius: 3px;
+  font-weight: 600;
+  font-size: 13px;
+  cursor: pointer;
+  color: #555;
+}
+
+.address-row .btn-zipcode:hover {
+  background-color: #ddd;
+}
+
+/* ------------------주문 내역---------------------- */
+.order-list {
+  background-color: #f9f7f0;
+  padding: 32px;
+  border-radius: 6px;
+  margin-top: 60px; /* 배송정보와 간격 */
+  font-size: 14px;
+}
+
+.order-list h2 {
+  font-weight: 700;
+  font-size: 20px;
+  margin-bottom: 24px;
+  border-bottom: 1px solid #1e1e1e;
+  padding-bottom: 12px;
+}
+
+.order-list ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* 개별 아이템 행 */
+.order-item {
+  display: flex;
+  align-items: center;
+  padding: 28px 0;
+  border-bottom: 1px solid #c7c7c7;
+  gap: 32px;
+}
+
+.order-item:last-child {
+  border-bottom: none;
+}
+
+/* 상품 이미지 */
+.order-item .item-img {
+  flex-shrink: 0;
+  width: 140px;
+  height: 140px;
+  overflow: hidden;
+  border-radius: 4px;
+}
+
+.order-item .item-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* 상품명·옵션 설명 */
+.order-item .item-desc {
+  flex: 1 1 0;
+}
+
+.item-name {
+  display: block;
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.item-option {
+  color: #666;
+  font-size: 14px;
+}
+
+/* 수량·가격 */
+.item-count,
+.item-price {
+  width: 80px;
+  text-align: right;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+/* ▶ 주문내역 수량·가격 위치 조정 (왼쪽으로 당기기) */
+.item-count {
+  margin-left: auto;
+  margin-right: 120px;
+} /* ← 왼쪽 여백(고정) */
+.item-price {
+  margin-right: 40px;
+} /* ← 가격도 동일 기준으로 */
+
+@media (max-width: 600px) {
+  /* 모바일 대응 – 이미지/텍스트 세로 쌓기 */
+  .order-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .item-count,
+  .item-price {
+    width: auto;
+    text-align: left;
+  }
+}
+
+/* ------------결제수단 등--------------- */
+/* ───────────── 결제 영역 ───────────── */
+.payment-area {
+  display: flex;
+  gap: 10px;
+  margin: 60px 0;
+  flex-wrap: wrap;
+}
+
+.payment-method,
+.payment-summary {
+  background: #f9f7f0;
+  border-radius: 6px;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+  padding: 28px 32px;
+  flex: 1;
+  min-width: 300px;
+  font-size: 14px;
+}
+
+.payment-method h3,
+.payment-summary h3 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 18px;
+  border-bottom: 1px solid #1e1e1e;
+  padding-bottom: 8px;
+}
+
+/* 결제 수단 라디오 */
+.methods {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px 16px;
+  margin-bottom: 18px;
+}
+.payment-method label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.payment-method input[type="radio"] {
+  appearance: none;
+  width: 14px;
+  height: 14px;
+  border: 1.5px solid #777;
+  border-radius: 50%;
+  position: relative;
+}
+.payment-method input[type="radio"]:checked::after {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #9fbb3d;
+}
+
+.payment-method select {
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  background: #e4e4e4;
+  font-size: 14px;
+  color: #444;
+  margin-bottom: 6px;
+}
+.card-info {
+  display: block;
+  font-size: 12px;
+  color: #777;
+  margin-top: 4px;
+}
+
+/* 결제 내역 표 */
+.payment-summary table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+.payment-summary th {
+  font-weight: 600;
+  text-align: left;
+  padding: 6px 0;
+}
+.payment-summary td {
+  text-align: right;
+  padding: 6px 0;
+}
+.total-price {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 700;
+  font-size: 18px;
+  margin: 10px 0 22px;
+  border-top: 2px solid #1e1e1e;
+  padding-top: 12px;
+}
+
+/* 동의 체크 */
+.agreements label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  margin-bottom: 8px;
+}
+.agreements input[type="checkbox"] {
+  accent-color: #9fbb3d;
+  width: 14px;
+  height: 14px;
+  cursor: pointer;
+}
+
+/* ───────────── 버튼 행 ───────────── */
+.btn-row {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin: 60px 0;
+}
+.btn-row button {
+  width: 240px;
+  height: 48px;
+  font-size: 18px;
+  font-weight: 700;
+  border: 1.5px solid #1e1e1e;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.btn-cancel:hover {
+  background: #e4e4e4;
+}
+.btn-submit {
+  background: #c8e068;
+  border-color: #a1b843;
+}
+.btn-submit:hover {
+  background: #a8c94c;
+}

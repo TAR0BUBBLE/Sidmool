@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Sidmool</title>
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+    <div id="header-placeholder"></div>
+
+
+
+    <!-- 배너 이미지 및 화살표 버튼 -->
+    <section class="hero">
+        <!-- 좌·우 네비게이션 -->
+        <button class="hero-arrow prev" aria-label="이전">
+            <img src="images/Button - Previous.png" alt="">
+        </button>
+
+        <!-- 배너 이미지 한 장 (src 는 JS가 바꿔 끼움) -->
+        <img id="hero-img" src="images/home-banner1.png" alt="Sidmool 메인 배너">
+
+        <button class="hero-arrow next" aria-label="다음">
+            <img src="images/Button - Next.png" alt="">
+        </button>
+    </section>
+
+    <!-- Best Product -->
+    <section class="bestandnew-product">
+        <h2>Best Product</h2>
+        <div class="product-list">
+            <div class="product-item">
+                <img src="images/Best_products/product1.png" alt="민중기 피브로블라스트 앰플 30ml" />
+                <p class="product-name">민중기 피브로블라스트 앰플 30ml</p>
+                <p class="product-price">69,800원</p>
+            </div>
+            <div class="product-item">
+                <img src="images/Best_products/product2.png" alt="사카로 광채 앰플 100ml" />
+                <p class="product-name">사카로 광채 앰플 100ml</p>
+                <p class="product-price">
+                    <span class="old-price">49,000원</span>
+                    <span class="sale-price">30,870원</span>
+                    <span class="sale-percent">37%</span>
+                </p>
+            </div>
+            <div class="product-item">
+                <img src="images/Best_products/product3.png" alt="센텔라시카 힐스크림 35g" />
+                <p class="product-name">센텔라시카 힐스크림 35g</p>
+                <p class="product-price">
+                    <span class="old-price">22,000원</span>
+                    <span class="sale-price">14,800원</span>
+                    <span class="sale-percent">33%</span>
+                </p>
+            </div>
+            <div class="product-item">
+                <img src="images/Best_products/product4.png" alt="프리미엄 호호바 오일 100ml" />
+                <p class="product-name">프리미엄 호호바 오일 100ml</p>
+                <p class="product-price">16,300원</p>
+            </div>
+            <div class="product-item">
+                <img src="images/Best_products/product5.png" alt="비타민C 에너지 수분젤 150ml" />
+                <p class="product-name">비타민C 에너지 수분젤 150ml</p>
+                <p class="product-price">
+                    <span class="old-price">12,000원</span>
+                    <span class="sale-price">8,900원</span>
+                    <span class="sale-percent">30%</span>
+                </p>
+            </div>
+            <div class="product-item">
+                <img src="images/Best_products/product6.png" alt="프리미엄 호호바 오일 100ml" />
+                <p class="product-name">아크바이TM 스킨 500ml</p>
+                <p class="product-price">22,600원</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Recommended Product -->
+    <section class="recommended-product">
+        <h2><strong>건성 피부</strong> 회원님에게 맞춘, 나만의 SKIN FIT</h2>
+        <div class="recommended-content">
+            <div class="recommended-image">
+                <img src="images/recommend_product/main_product.png" alt="시드물 약산성 비누" />
+            </div>
+
+            <div class="recommended-right">
+                <div class="filter-buttons">
+                    <button><strong>스킨 / 토너 / 미스트</strong></button>
+                    <button><strong>앰플 / 에센스 / 세럼</strong></button>
+                    <button><strong>로션 / 크림</strong></button>
+                    <button><strong>오일</strong></button>
+                </div>
+
+                <div class="recommended-list">
+                    <div class="recommended-item">
+                        <span class="rank">1</span>
+                        <img src="images/recommend_product/product1.png" alt="아크바이TM 스킨 500ml" />
+                        <div class="product-info">
+                            <p class="product-name">아크바이TM 스킨 500ml</p>
+                            <p class="product-price">22,600원</p>
+                            <p class="product-comments"><img src="images/recommend_product/Review.png" alt="댓글 아이콘" />
+                                5,375</p>
+                        </div>
+                    </div>
+
+                    <div class="recommended-item">
+                        <span class="rank">2</span>
+                        <img src="images/recommend_product/product2.png" alt="콜라겐 아데노신 앰플 토너 210ml" />
+                        <div class="product-info">
+                            <p class="product-name">콜라겐 아데노신 앰플 토너 210ml</p>
+                            <p class="product-price">12,600원</p>
+                            <p class="product-comments"><img src="images/recommend_product/Review.png" alt="댓글 아이콘" />
+                                647</p>
+                        </div>
+                    </div>
+
+                    <div class="recommended-item">
+                        <span class="rank">3</span>
+                        <img src="images/recommend_product/product3.png" alt="엑토인 시카 에센스 토너 210ml" />
+                        <div class="product-info">
+                            <p class="product-name">엑토인 시카 에센스 토너 210ml</p>
+                            <p class="product-price">15,000원</p>
+                            <p class="product-comments"><img src="images/recommend_product/Review.png" alt="댓글 아이콘" />
+                                379</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Company Campaign Section -->
+    <section class="company-campaign">
+        <img src="images/Campaign_banner.png" alt="COMPASSION IN EVERY DROP" />
+
+        <h3><strong>한 방울의 연민으로 지키는 동물권</strong></h3>
+        <p>
+            시드물은 동물과 인간 모두에게 해로운 성분을 멀리하며, 매년 카라(KARA)에 후원금을 전달해 왔습니다.<br />
+            피부 속 빛나는 건강과 더불어, 우리가 사랑하는 모든 생명에게도 따뜻한 보살핌을 전합니다.
+        </p>
+
+    </section>
+
+    <!-- New Product -->
+    <section class="bestandnew-product">
+        <h2>New Product</h2>
+        <div class="product-list">
+            <div class="product-item">
+                <img src="images/New_products/product1.png" alt="율무 약산성 수제 비누" />
+                <p class="product-name">율무 약산성 수제 비누</p>
+                <p class="product-price">6,800원</p>
+            </div>
+            <div class="product-item">
+                <img src="images/New_products/product2.png" alt="닥터트럽 스키닝 유황 클렌져" />
+                <p class="product-name">닥터트럽 스키닝 유황 클렌져</p>
+                <p class="product-price">
+                    <span class="old-price">16,800원</span>
+                    <span class="sale-price">9,900원</span>
+                    <span class="sale-percent">41%</span>
+                </p>
+            </div>
+            <div class="product-item">
+                <img src="images/New_products/product3.png" alt="스킨소스 페룰릭 5000 앰플 40ml" />
+                <p class="product-name">스킨소스 페룰릭 5000 앰플 40ml</p>
+                <p class="product-price">18,600원</p>
+            </div>
+            <div class="product-item">
+                <img src="images/New_products/product4.png" alt="스킨소스 리포좀 바이오톡스 수면팩" />
+                <p class="product-name">스킨소스 리포좀 바이오톡스 수면팩</p>
+                <p class="product-price">16,800원</p>
+            </div>
+            <div class="product-item">
+                <img src="images/New_products/product5.png" alt="포어 실키 에너지 수분젤 60ml" />
+                <p class="product-name">포어 실키 에너지 수분젤 60ml</p>
+                <p class="product-price">8,900원</p>
+            </div>
+            <div class="product-item">
+                <img src="images/New_products/product6.png" alt="티트리 에센셜 165ml(겔타입)" />
+                <p class="product-name">티트리 에센셜 165ml(겔타입)</p>
+                <p class="product-price">13,00원</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- <section class="banner">
+        <img src="images/banner.png" alt="COMPASSION IN EVERY DROP" />
+    </section> -->
+
+    <div id="footer-placeholder"></div>
+
+    <script type="module">
+        const holder = document.getElementById('header-placeholder');
+        
+        // header, footer 불러오기
+        /* ---- fetch & 삽입 ---- */
+        fetch('/header.html')
+            .then(r => r.text())
+            .then(html => {
+                const tpl = document.createElement('template');
+                tpl.innerHTML = html.trim();
+                holder.appendChild(tpl.content);      // 마크업 삽입
+
+                /* ---- (★) header.html 안 <script> 재실행 ---- */
+                execScripts(holder);
+            });
+
+        /* -------------- 헬퍼 -------------- */
+        function execScripts(scope) {
+            scope.querySelectorAll('script').forEach(src => {
+                const s = document.createElement('script');
+                [...src.attributes].forEach(a => s.setAttribute(a.name, a.value));
+                s.textContent = src.textContent;
+                document.head.appendChild(s);
+                src.remove();                         // 메모리 누수 방지
+            });
+        }
+
+        // footer 로드
+        fetch('/footer.html')
+            .then(r => r.text())
+            .then(t => document.querySelector('#footer-placeholder').innerHTML = t);
+
+
+        (() => {
+            const sections = document.querySelectorAll('section');
+            let currentSection = 0;
+            let isScrolling = false;
+
+            function scrollToSection(index) {
+                if (index < 0 || index >= sections.length) return;
+                isScrolling = true;
+                sections[index].scrollIntoView({ behavior: 'smooth' });
+                currentSection = index;
+
+                setTimeout(() => {
+                    isScrolling = false;
+                }, 700); // 애니메이션 시간 맞춰 조절
+            }
+
+            window.addEventListener('wheel', (e) => {
+                if (isScrolling) return;
+
+                // 미세한 스크롤 무시, 30 정도 조절 가능
+                if (Math.abs(e.deltaY) < 5) return;
+
+                if (e.deltaY > 0) {
+                    scrollToSection(currentSection + 1);
+                } else if (e.deltaY < 0) {
+                    scrollToSection(currentSection - 1);
+                }
+            });
+
+            window.addEventListener('keydown', (e) => {
+                if (isScrolling) return;
+
+                if (e.key === 'ArrowDown') {
+                    scrollToSection(currentSection + 1);
+                } else if (e.key === 'ArrowUp') {
+                    scrollToSection(currentSection - 1);
+                }
+            });
+
+            scrollToSection(0);
+        })();
+
+
+
+
+
+
+
+
+        //------------------배너 이미지 넘기기-----------------
+        /* 준비해둔 배너 이미지 경로를 순서대로 나열 */
+        const banners = [
+            'images/home-banner1.png',
+            'images/home-banner2.png',
+            'images/home-banner3.png',
+            'images/home-banner4.png'
+        ];
+
+        let idx = 0;
+        const heroImg = document.getElementById('hero-img');
+
+        /* 버튼 요소 */
+        document.querySelector('.hero-arrow.prev').onclick = () => change(-1);
+        document.querySelector('.hero-arrow.next').onclick = () => change(1);
+
+        function change(step) {
+            // 1. 페이드 아웃
+            heroImg.style.opacity = 0;
+
+            // 2. 트랜지션 끝난 후 이미지 교체 및 페이드 인
+            setTimeout(() => {
+                idx = (idx + step + banners.length) % banners.length;
+                heroImg.src = banners[idx];
+                heroImg.style.opacity = 1;
+            }, 550); // 700ms는 CSS 트랜지션 시간과 맞춤
+        }
+
+        // 자동 슬라이드 적용 시
+        setInterval(() => change(1), 7000);
+
+        //--------------Best product, new product---------------
+        // 제품 수평 스크롤
+        const slider = document.querySelector('.product-list');
+
+        let isDown = false;
+        let startX;
+        let scrollLeft;
+
+        slider.addEventListener('mousedown', (e) => {
+            isDown = true;
+            slider.classList.add('active');
+            startX = e.pageX - slider.offsetLeft;
+            scrollLeft = slider.scrollLeft;
+        });
+        slider.addEventListener('mouseleave', () => {
+            isDown = false;
+            slider.classList.remove('active');
+        });
+        slider.addEventListener('mouseup', () => {
+            isDown = false;
+            slider.classList.remove('active');
+        });
+        slider.addEventListener('mousemove', (e) => {
+            if (!isDown) return;
+            e.preventDefault();
+            const x = e.pageX - slider.offsetLeft;
+            const walk = (x - startX) * 2; // 스크롤 속도 조절
+            slider.scrollLeft = scrollLeft - walk;
+        });
+
+
+    </script>
+</body>
+
+
+</html>

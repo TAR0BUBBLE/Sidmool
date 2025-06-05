@@ -1,0 +1,242 @@
+* {
+  box-sizing: border-box;
+  font-family: "Noto Sans KR", sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+a{
+  text-decoration: none;
+}
+
+.header {
+  position: fixed; /* 화면 상단에 고정 */
+  z-index: 9999;
+  top: 0; /* 최상단 */
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 30px;
+  padding-right: 30px;
+  font-weight: 700;
+  font-size: 18px;
+  color: #000;
+}
+
+.header .logo {
+  padding-bottom: 13px;
+}
+
+.header .logo img {
+  width: 150px; /* 원하는 너비로 조절 */
+  height: auto; /* 비율 유지 */
+  display: block; /* inline img 기본 여백 제거 */
+}
+
+.left-group {
+  display: flex;
+  align-items: center;
+  gap: 20px; /* 메뉴 버튼과 로고 간 간격을 조절 */
+}
+
+.header-icons {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+button {
+  border: none;
+  background: transparent;
+  outline: none;
+  cursor: pointer;
+}
+
+/* -------------------카테고리 메뉴 바------------------- */
+
+:root {
+  --pane-w: 310px;
+}
+
+/* 사이드 메뉴 기본 숨김 및 슬라이드 준비 */
+.side-menu {
+  position: fixed;
+  top: 0;
+  left: -310px; /* 메뉴가 화면 밖으로 숨겨짐 */
+  width: var(--pane-w);
+  height: 100vh;
+
+  overflow-x: hidden;
+  overflow-y: auto;
+
+  background-color: #f9f7f0;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+  transition: left 0.3s ease;
+  padding: 20px;
+  z-index: 9998;
+}
+
+/* 메뉴가 열린 상태 */
+.side-menu.open {
+  left: 0;
+}
+
+/* 2단이 열렸을 때 폭을 620px(310 * 2)로 늘리는 상태 클래스 */
+.side-menu.detail-open {
+  width: calc(var(--pane-w) * 2);
+  overflow-x: visible;
+}
+
+/* 폭이 늘어나면 그림자·배경은 이어지고, 2단 패널은 그대로 absolute 310px 오른쪽에 붙음 */
+
+/* 메뉴 리스트 스타일 */
+.side-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  margin-left: 12px;
+  margin-top: 80px;
+}
+
+.side-menu li {
+  padding: 20px 0;
+  font-weight: 1000;
+  font-size: 20px;
+  font-style: bold;
+  cursor: pointer;
+}
+
+/* 햄버거 메뉴 버튼 (header.html에서 적절히 지정) */
+.menu-btn {
+  cursor: pointer;
+}
+
+/* ───────── 서브메뉴 기본 숨김 ───────── */
+.sub-menu {
+  display: none;
+  margin-left: 14px; /* 안쪽 들여쓰기 */
+}
+
+/* 상위 li에 .open이 붙으면 보이기 */
+.has-sub.open > .sub-menu {
+  display: block;
+}
+
+/* ───────── 화살표 회전 애니메이션 ───────── */
+.arrow {
+  width: 12px;
+  margin-left: 6px;
+  transition: transform 0.25s;
+}
+
+.has-sub.open > .arrow {
+  transform: rotate(90deg); /* ▶ → ▼ */
+}
+
+/* ───── 상위항목 기본 레이아웃 ───── */
+.has-sub {
+  /* li 자체를 클릭 타깃으로 */
+  cursor: pointer;
+  padding-bottom: 6px; /* ↓ 20px → 6px 정도로 축소 */
+}
+
+/* 텍스트와 화살표를 한 줄에 두기 */
+.has-sub .title,
+.has-sub .arrow {
+  display: inline-block;
+  vertical-align: middle; /* 세로 정렬 */
+}
+
+/* 화살표 기본 상태(아래방향 PNG) */
+.arrow {
+  width: 12px;
+  margin-left: 6px;
+  transition: transform 0.25s; /* 부드러운 회전 */
+}
+
+/* ▼ 열린 상태: ↓ PNG를 180° 돌려서 ↑ 모양 */
+.has-sub.open > .arrow {
+  transform: rotate(180deg);
+}
+
+/* ───── 서브메뉴 위치/간격 ───── */
+.sub-menu {
+  display: none;
+  margin: 10px 0 0 20px; /* 위쪽·왼쪽 들여쓰기 */
+}
+
+.sub-menu li {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  font-weight: 500;
+  font-size: 16px;
+  font-style: bold;
+  cursor: pointer;
+}
+
+.has-sub.open > .sub-menu {
+  margin-top: 18px; /* ↓ 10px → 4px */
+  display: block;
+}
+
+/* 왼쪽 1차 하위 항목(▶ 화살표) */
+.has-detail .arrow2 {
+  width: 10px;
+  margin-left: 4px;
+  transition: transform 0.35s;
+}
+
+/* ▼ 활성(열림) 상태일 때 180° 회전 */
+.has-detail.active .arrow2 {
+  transform: rotate(180deg); /* 시계방향 180° */
+}
+
+/* ③ 2단 패널 */
+.detail-pane {
+  position: fixed;
+  top: 0;
+  left: var(--pane-w); /* 1단 바로 오른쪽 */
+  width: var(--pane-w);
+  height: 100%;
+  background: #f9f7f0;
+  border-left: 1px solid #ddd;
+  padding: 80px 24px 24px; /* 1단과 비슷한 위 여백 */
+  transform: translateX(-200%); /* 기본은 화면 밖 */
+  transition: transform 0.4s ease;
+  z-index: 9990; /* 1단 위에 겹치도록 */
+}
+
+/* 활성화(show) 상태 → 슬라이드 인 */
+.detail-pane.show {
+  transform: translateX(0);
+}
+
+/* 제목(선택) 스타일 */
+.pane-title {
+  font-weight: 800;
+  font-size: 15px;
+  margin-bottom: 16px;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 6px;
+}
+
+/* detail-pane 안 목록에서 ● 마커 없애기 */
+.detail-pane ul {
+  list-style: none; /* ● 제거 */
+  padding-left: 0; /* 왼쪽 여백도 함께 제거 */
+}
+
+/* 2단 항목 */
+.detail-pane ul li {
+  padding: 6px 0;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.detail-pane ul li:hover {
+  color: #3b7205;
+  font-weight: 700;
+}
