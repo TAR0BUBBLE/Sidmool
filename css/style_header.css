@@ -6,9 +6,10 @@
   color: #333;
 }
 
-a{
+a {
   text-decoration: none;
 }
+
 
 .header {
   position: fixed; /* 화면 상단에 고정 */
@@ -237,6 +238,6 @@ button {
 }
 
 .detail-pane ul li:hover {
-  color: #3b7205;
   font-weight: 700;
+  color: #3b7205;
 }
