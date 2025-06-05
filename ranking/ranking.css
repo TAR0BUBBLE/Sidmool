@@ -118,29 +118,57 @@ body {
   font-weight: bold;
 }
 
-/* 1~3위 특별 배지 색상 + 크기 + 볼드 */
-.rank-badge.gold {
-  background-color: #d4af37;
-  font-size: 15px;
-  font-weight: 800;
-  padding: 6px 12px;
-  min-width: 36px;
-}
-
-.rank-badge.silver {
-  background-color: #c0c0c0;
-  font-size: 14px;
-  font-weight: 800;
-  padding: 6px 11px;
-  min-width: 34px;
-}
-
+/* 1~3위 특별 배지 색상 + 크기 + 볼드 + 메달 아이콘 */
+.rank-badge.gold,
+.rank-badge.silver,
 .rank-badge.bronze {
-  background-color: #cd7f32;
-  font-size: 13.5px;
-  font-weight: 800;
-  padding: 6px 10px;
-  min-width: 32px;
+  background-color: transparent;
+  position: absolute;
+  top: -12px;
+  left: 0;
+  padding: 4px 8px;
+  border-radius: 12px;
+  z-index: 2;
+  min-width: 28px;
+}
+
+.rank-badge.gold::before {
+  content: "🥇";
+  font-size: 30px;
+  background-color: transparent;
+  position: absolute;
+  top: -12px;
+  left: 0;
+  padding: 4px 8px;
+  border-radius: 12px;
+  z-index: 2;
+  min-width: 28px;
+}
+
+.rank-badge.silver::before {
+  content: "🥈";
+  font-size: 30px;
+  background-color: transparent;
+  position: absolute;
+  top: -12px;
+  left: 0;
+  padding: 4px 8px;
+  border-radius: 12px;
+  z-index: 2;
+  min-width: 28px;
+}
+
+.rank-badge.bronze::before {
+  content: "🥉";
+  font-size: 30px;
+  background-color: transparent;
+  position: absolute;
+  top: -12px;
+  left: 0;
+  padding: 4px 8px;
+  border-radius: 12px;
+  z-index: 2;
+  min-width: 28px;
 }
 
 /* 상품 이미지 컨테이너 */
@@ -209,10 +237,11 @@ body {
 }
 
 .product-card .discount {
-  font-size: 14px;
+  font-size: 16px;
   color: #e74c3c;
   font-weight: 600;
   margin-left: 8px;
+  font-weight: bold;
 }
 
 /* 반응형 디자인 */
@@ -247,6 +276,19 @@ body {
     padding: 6px 16px;
     font-size: 13px;
   }
+
+  /* 모바일에서 메달 아이콘 크기 조정 */
+  .rank-badge.gold::before {
+    font-size: 14px;
+  }
+
+  .rank-badge.silver::before {
+    font-size: 13px;
+  }
+
+  .rank-badge.bronze::before {
+    font-size: 12px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -277,5 +319,18 @@ body {
     font-size: 11px;
     padding: 3px 7px;
     min-width: 24px;
+  }
+
+  /* 작은 화면에서 메달 아이콘 더 작게 */
+  .rank-badge.gold::before {
+    font-size: 12px;
+  }
+
+  .rank-badge.silver::before {
+    font-size: 11px;
+  }
+
+  .rank-badge.bronze::before {
+    font-size: 10px;
   }
 }

@@ -59,7 +59,7 @@
           </div>
           <div class="product-card">
             <img src="essence_image/1X2.png" alt="아크바이 스킨" />
-            <p class="name">아크바이™ 스킨 120ml</p>
+            <p class="name">아크바이™ 스킨</p>
             <p class="volume">120ml</p>
             <p class="price"><span class="price-amount">6,800원</span></p>
           </div>
@@ -109,7 +109,11 @@
             <img src="essence_image/3X2.png" alt="닥터트럽 마일드 토너" />
             <p class="name">닥터트럽 마일드 토너</p>
             <p class="volume">150ml</p>
-            <p class="price"><span class="price-amount">15,600원</span></p>
+            <p class="price">
+              <span class="original-price">19,300원</span>
+              <span class="price-amount">15,600원</span>
+              <span class="discount">15%</span>
+            </p>
           </div>
           <div class="product-card">
             <img src="essence_image/3X3.png" alt="웰빙 녹차 판테놀" />
@@ -130,39 +134,40 @@
         </div>
       </section>
     </main>
-
     <div id="footer-placeholder"></div>
   </body>
 
   <script type="module">
-    const holder = document.getElementById('header-placeholder');
+    const holder = document.getElementById("header-placeholder");
     // header, footer 불러오기
     /* ---- fetch & 삽입 ---- */
-    fetch('/header.html')
-        .then(r => r.text())
-        .then(html => {
-            const tpl = document.createElement('template');
-            tpl.innerHTML = html.trim();
-            holder.appendChild(tpl.content);      // 마크업 삽입
+    fetch("/header.html")
+      .then((r) => r.text())
+      .then((html) => {
+        const tpl = document.createElement("template");
+        tpl.innerHTML = html.trim();
+        holder.appendChild(tpl.content); // 마크업 삽입
 
-            /* ---- (★) header.html 안 <script> 재실행 ---- */
-            execScripts(holder);
-        });
+        /* ---- (★) header.html 안 <script> 재실행 ---- */
+        execScripts(holder);
+      });
 
     /* -------------- 헬퍼 -------------- */
     function execScripts(scope) {
-        scope.querySelectorAll('script').forEach(src => {
-            const s = document.createElement('script');
-            [...src.attributes].forEach(a => s.setAttribute(a.name, a.value));
-            s.textContent = src.textContent;
-            document.head.appendChild(s);
-            src.remove();                         // 메모리 누수 방지
-        });
+      scope.querySelectorAll("script").forEach((src) => {
+        const s = document.createElement("script");
+        [...src.attributes].forEach((a) => s.setAttribute(a.name, a.value));
+        s.textContent = src.textContent;
+        document.head.appendChild(s);
+        src.remove(); // 메모리 누수 방지
+      });
     }
 
     // footer 로드
-    fetch('../footer.html')
-        .then(r => r.text())
-        .then(t => document.querySelector('#footer-placeholder').innerHTML = t);
-</script>
+    fetch("../footer.html")
+      .then((r) => r.text())
+      .then(
+        (t) => (document.querySelector("#footer-placeholder").innerHTML = t)
+      );
+  </script>
 </html>
