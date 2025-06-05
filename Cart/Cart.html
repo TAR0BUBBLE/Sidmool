@@ -5,9 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cart - SIDMOOL</title>
     <link rel="stylesheet" href="Cart.css" />
+    <link rel="stylesheet" href="/css/style_header.css" />
+    <link rel="stylesheet" href="/css/style_footer.css" />
     <script defer src="Cart.js"></script>
   </head>
   <body>
+    <div id="header-placeholder"></div>
     <main class="cart-container">
       <h1 class="cart-title">CART</h1>
       <div class="cart-steps">
@@ -141,5 +144,40 @@
         </div>
       </div>
     </main>
+
+    <div id="footer-placeholder"></div>
+    <script type="module">
+      const holder = document.getElementById("header-placeholder");
+      // header, footer 불러오기
+      /* ---- fetch & 삽입 ---- */
+      fetch("/header.html") // header.html 경로는 사이트 루트 기준입니다.
+        .then((r) => r.text())
+        .then((html) => {
+          const tpl = document.createElement("template");
+          tpl.innerHTML = html.trim();
+          holder.appendChild(tpl.content); // 마크업 삽입
+
+          /* ---- (★) header.html 안 <script> 재실행 ---- */
+          execScripts(holder);
+        });
+
+      /* -------------- 헬퍼 -------------- */
+      function execScripts(scope) {
+        scope.querySelectorAll("script").forEach((src) => {
+          const s = document.createElement("script");
+          [...src.attributes].forEach((a) => s.setAttribute(a.name, a.value));
+          s.textContent = src.textContent;
+          document.head.appendChild(s);
+          src.remove(); // 메모리 누수 방지
+        });
+      }
+
+      // footer 로드
+      fetch("../footer.html") // footer.html 경로는 현재 HTML 파일 위치 기준 상위 폴더입니다. 실제 경로에 맞게 수정 필요할 수 있습니다.
+        .then((r) => r.text())
+        .then(
+          (t) => (document.querySelector("#footer-placeholder").innerHTML = t)
+        );
+    </script>
   </body>
 </html>
