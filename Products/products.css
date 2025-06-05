@@ -11,7 +11,7 @@ body {
   margin: 0;
   font-family: "Noto Sans KR", sans-serif, -apple-system, BlinkMacSystemFont,
     "Segoe UI", Roboto, sans-serif;
-  background-color: #f8f6f0;
+  background-color: #f3eee2; /* 배경 페이지 컬러 변경 */
   color: #333;
 }
 
@@ -27,6 +27,12 @@ body {
 .breadcrumb a {
   text-decoration: none;
   color: #666;
+  transition: color 0.2s ease, font-weight 0.2s ease; /* 트랜지션 추가 */
+}
+
+.breadcrumb a:hover {
+  color: #3b7205; /* 호버 시 글자 색 변경 */
+  font-weight: 600; /* 호버 시 font-weight 변경 */
 }
 
 .products-page {
@@ -35,7 +41,6 @@ body {
   max-width: 1400px;
   margin: auto;
   margin-bottom: 200px;
-
   gap: 40px;
 }
 
@@ -44,7 +49,6 @@ body {
   border: 1px solid #e0e0e0;
   border-radius: 8px;
   padding: 24px;
-  width: 200px; /* 기존 설정 유지 */
   width: 200px;
   height: fit-content;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
@@ -74,12 +78,12 @@ body {
   font-size: 14px;
   cursor: pointer;
   border-bottom: 1px solid #f0f0f0;
-  transition: color 0.2s;
+  /* 기존 li에 있던 transition: color 0.2s; 는 a 태그로 이동 또는 아래 a 태그의 transition으로 대체 */
 }
 
-.category-menu li:hover {
-  color: #2d5a3d;
-}
+/* .category-menu li:hover { */
+/* color: #2d5a3d; /* 이 스타일은 아래 a:hover로 대체 또는 통합됩니다. */
+/* } */
 
 .category-menu li a {
   text-decoration: none;
@@ -87,19 +91,31 @@ body {
   font-weight: normal;
   display: block;
   width: 100%;
+  transition: color 0.2s ease, font-weight 0.2s ease; /* 트랜지션 추가 */
+}
+
+.category-menu li a:hover {
+  color: #3b7205; /* 호버 시 글자 색 변경 */
+  font-weight: 600; /* 호버 시 font-weight 변경 */
 }
 
 .category-menu li.active a {
   font-weight: 600;
-  color: #2d5a3d;
+  color: #2d5a3d; /* 현재 활성 메뉴 색상 (요청된 호버 색상과 다름) */
   position: relative;
+}
+
+/* 활성 상태일 때도 호버 스타일 적용 (선택적: 활성 메뉴는 호버 효과를 다르게 주고 싶다면 이 부분을 수정/제외) */
+.category-menu li.active a:hover {
+  color: #3b7205; /* 호버 시 글자 색 변경 */
+  font-weight: 600; /* 호버 시 font-weight 변경 (기존 600과 동일하면 변화 없음) */
 }
 
 /* 왼쪽에 ▸ 기호 추가 */
 .category-menu li.active a::before {
   content: "▸ ";
   font-weight: bold;
-  color: #2d5a3d;
+  color: #2d5a3d; /* 현재 활성 메뉴 색상과 동일 */
   margin-right: 4px;
 }
 
@@ -145,16 +161,18 @@ body {
   text-decoration: none;
   padding: 8px 12px;
   border-radius: 4px;
-  transition: all 0.2s;
+  transition: all 0.2s; /* 기존 transition 유지 */
 }
 
 .sort-options a:hover {
-  background-color: #f0f0f0;
+  background-color: #f0f0f0; /* 기존 배경색 변경 유지 */
+  color: #3b7205; /* 호버 시 글자 색 변경 */
+  font-weight: 600; /* 호버 시 font-weight 변경 */
 }
 
 .sort-options .active {
   font-weight: 600;
-  color: #2d5a3d;
+  color: #2d5a3d; /* 현재 활성 정렬 옵션 색상 */
   background-color: #f0f7f2;
 }
 
@@ -182,7 +200,7 @@ body {
 
 .product-card img {
   width: 100%;
-  max-width: 100%; /* 이미지가 부모 요소를 넘지 않도록 명시 */
+  max-width: 100%;
   height: 180px;
   object-fit: contain;
   border-radius: 8px;
@@ -196,11 +214,11 @@ body {
   font-weight: 500;
   color: #333;
   line-height: 1.4;
-  min-height: 40px; /* 제품명 길이에 따른 카드 높이 변화를 줄이기 위해 최소 높이 설정 */
-  display: flex; /* flex를 사용하여 내부 텍스트를 수직 중앙 정렬 */
-  flex-direction: column; /* 내부 요소를 수직으로 쌓음 */
-  justify-content: center; /* 수직 중앙 정렬 */
-  align-items: center; /* 수평 중앙 정렬 (이미 text-align: center 이지만 명시) */
+  min-height: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .product-card .volume {
@@ -244,23 +262,36 @@ body {
   }
 
   .category-menu {
-    width: 100%; /* 화면이 작을 때는 너비를 100%로 변경 */
-    min-width: 0; /* 화면이 작을 때는 min-width 제한 해제 */
+    width: 100%;
+    min-width: 0;
     margin-bottom: 20px;
   }
 
   .category-menu ul li a {
+    /* 여기서는 a태그에 직접 스타일 적용 */
     text-decoration: none;
     color: #333;
     font-weight: normal;
-    display: inline-block; /* 필요시 block으로 유지하거나 상황에 맞게 조정 */
+    display: inline-block; /* 반응형에서는 inline-block으로 변경됨 */
     padding: 4px 0;
+    /* transition은 상단 a 정의에서 상속받거나, 여기서 재정의 가능 */
   }
 
   .category-menu ul li.active a {
     font-weight: bold; /* 기존 bold 유지 */
-    color: #2d5a3d; /* 활성 링크 색상 유지 */
+    color: #2d5a3d;
     position: relative;
+  }
+
+  /* 반응형에서도 호버 효과 유지 */
+  .category-menu ul li a:hover {
+    color: #3b7205;
+    font-weight: 600;
+  }
+  .category-menu ul li.active a:hover {
+    /* 활성 메뉴 호버 시 */
+    color: #3b7205;
+    /* font-weight: bold; 이미 bold 이므로 생략 가능 */
   }
 
   .category-menu ul li.active a::before {
@@ -279,4 +310,16 @@ body {
   .product-grid {
     grid-template-columns: 1fr;
   }
+}
+
+.product-list.product-grid > a {
+  text-decoration: none; /* 링크 밑줄 제거 */
+  color: inherit; /* 부모 요소의 글자색 상속 (카드 내부 텍스트 색상 유지) */
+  display: block; /* a 태그가 div처럼 영역을 차지하도록 설정 */
+}
+
+.ample {
+  width: 150px;
+  height: auto; /* 비율 유지 */
+  padding-right: 60px;
 }
