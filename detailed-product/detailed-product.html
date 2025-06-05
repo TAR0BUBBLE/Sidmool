@@ -269,15 +269,35 @@
                     <span><strong>리뷰</strong> 100</span>
                     <div class="review-filter-box">
                         <label><input type="checkbox"> 포토/동영상 리뷰만 모아보기</label>
-                        <select class="recomend"><option>추천순</option></select>
+                        <select class="recomend">
+                            <option>추천순</option>
+                            <option>최근순</option>
+                        </select>
                         <input type="text" placeholder="리뷰 키워드 검색">
                     </div>
                 </div>
 
                 <div class="review-filter-select">
-                    <select><option>별점</option></select>
-                    <select><option>피부 고민</option></select>
-                    <select><option>피부타입</option></select>
+                    <select name="star-score">
+                        <option disabled selected hidden>별점</option>
+                        <option>5점</option>
+                        <option>4점</option>
+                        <option>3점</option>
+                        <option>2점</option>
+                        <option>1점</option>
+                    </select>
+                    <select name="skin-concern ">
+                        <option disabled selected hidden>피부 고민</option>
+                        <option>여드름</option>
+                        <option>아토피</option>
+                        <option>탄력</option>
+                    </select>
+                    <select name="skin-type">
+                        <option disabled selected hidden>피부타입</option>
+                        <option>건조</option>
+                        <option>지성</option>
+                        <option>복합성</option>
+                    </select>
                 </div>
 
                 <!-- 실제 리뷰 -->
@@ -392,31 +412,31 @@
 
             <div class="qna-item">
                 <div class="qna-meta">
-                <button class="answered">답변 완료</button>
-                <span class="user">eunsong415</span>
-                <span class="date">2025-5-12</span>
+                    <button class="answered">답변 완료</button>
+                    <span class="user">eunsong415</span>
+                    <span class="date">2025-5-12</span>
                 </div>
                 <div class="qna-content secret">
-                <span class="lock-icon">🔒</span> 비밀글입니다.
+                    <span class="lock-icon">🔒</span> 비밀글입니다.
                 </div>
             </div>
 
             <div class="qna-item">
                 <div class="qna-meta">
-                <button class="pending">답변 전</button>
-                <span class="user">giddonge1030</span>
-                <span class="date">2025-5-12</span>
+                    <button class="pending">답변 전</button>
+                    <span class="user">giddonge1030</span>
+                    <span class="date">2025-5-12</span>
                 </div>
                 <div class="qna-content secret">
-                <span class="lock-icon">🔒</span> 비밀글입니다.
+                    <span class="lock-icon">🔒</span> 비밀글입니다.
                 </div>
             </div>
 
             <div class="qna-item">
                 <div class="qna-meta">
-                <button class="pending">답변 전</button>
-                <span class="user">yoonyoonkawaiiii</span>
-                <span class="date">2025-5-12</span>
+                    <button class="pending">답변 전</button>
+                    <span class="user">yoonyoonkawaiiii</span>
+                    <span class="date">2025-5-12</span>
                 </div>
                 <div class="qna-content">
                 클렌징 잘 지워지나요?
