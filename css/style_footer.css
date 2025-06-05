@@ -40,7 +40,8 @@ footer {
 }
 
 .footer-nav a:hover {
-  color: #a4bc3e;
+  color:  #3b7205;
+  font-weight: 900;
 }
 
 .footer-h4 {
