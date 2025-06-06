@@ -8,7 +8,7 @@
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
     "Noto Sans KR", sans-serif;
-  background-color: #f3eee2; /* 배경 페이지 컬러 변경 */
+  background-color: #f3eee2;
   color: #333;
   line-height: 1.4;
 }
@@ -29,12 +29,14 @@ body {
 
 /* 페이지 제목 */
 .page-title {
-  font-size: 24px;
-  font-weight: 700;
+  color: black;
+  padding-bottom: 50px;
+  margin-bottom: 0px;
   text-align: center;
-  color: #333;
-  margin-bottom: 30px;
-  letter-spacing: 2px;
+  font-size: 30px;
+  font-family: Inter;
+  font-weight: 500;
+  line-height: 60px;
 }
 
 /* 카테고리 탭 */
@@ -45,57 +47,54 @@ body {
   margin-bottom: 50px;
 }
 
-/* 탭 (a태그에 적용) */
+/* ===================================== */
+/* 카테고리 탭 (파스텔 톤 색상 수정)     */
+/* ===================================== */
+
 .tab {
-  background-color: #e8e8e8;
+  background-color: #e3e9e1; /* [수정] 부드러운 파스텔 그린 배경 */
+  border: 2px solid transparent; /* [추가] 활성/비활성 테두리 전환 시 크기 변동 방지 */
   border-radius: 20px;
   padding: 8px 20px;
   font-size: 14px;
   font-weight: 500;
   cursor: pointer;
-  transition: background-color 0.2s ease, color 0.2s ease, font-weight 0.2s ease; /* 트랜지션 업데이트 */
-  color: #666;
+  transition: all 0.2s ease;
+  color: #586454; /* [수정] 차분한 짙은 녹회색 글씨 */
   text-decoration: none;
-
-  /* flex로 내부 중앙 정렬 */
   display: flex;
   align-items: center;
   justify-content: center;
-
   user-select: none;
 }
 
 .tab:hover {
-  background-color: #d0d0d0; /* 기존 배경색 호버 유지 */
-  color: #3b7205; /* 호버 시 글자 색 변경 */
-  font-weight: 600; /* 호버 시 font-weight 변경 */
+  background-color: #d8e0d5; /* [수정] 호버 시 배경색 */
+  color: #3b7205; /* 호버 시 글자색 유지 */
+  font-weight: 600;
 }
 
 .tab.active {
-  background-color: rgba(0, 0, 0, 0.1);
-  color: inherit; /* 기본 글자색은 #333 또는 #666이 될 수 있음 */
-  font-weight: 500; /* 활성 탭 기본 font-weight (필요시 600 등으로 조정) */
-  border: 2px solid #333;
+  background-color: #e3e9e1; /* [수정] 활성 탭 배경색도 통일 */
+  color: #3b7205; /* [수정] 활성 탭 글자색을 짙은 녹색으로 강조 */
+  font-weight: 600;
+  border: 2px solid #a3b899; /* [수정] 톤 다운된 파스텔 그린 테두리 */
 }
 
-/* 활성 탭 호버 시 (선택적 스타일 조정) */
 .tab.active:hover {
-  background-color: rgba(
-    0,
-    0,
-    0,
-    0.15
-  ); /* 예: 활성 탭 호버 시 배경 살짝 변경 */
-  color: #3b7205; /* 호버 시 글자 색 변경 */
-  font-weight: 600; /* 호버 시 font-weight 변경 */
-  /* border-color: #3b7205; /* 테두리 색상도 변경 원할 시 */
+  background-color: #d8e0d5;
+  color: #3b7205;
+  border-color: #9caf95; /* [수정] 활성 탭 호버 시 테두리 색도 미세하게 변경 */
 }
 
-/* 방문 후에도 색상 유지 */
 .tab:visited {
-  color: #666; /* 기본 .tab의 color와 동일하게 유지 또는 상황에 맞게 조정 */
+  color: #586454;
   text-decoration: none;
 }
+
+/* ===================================== */
+/* 이하 코드는 이전과 동일합니다.          */
+/* ===================================== */
 
 /* 상품 그리드 */
 .products-grid {
@@ -114,15 +113,14 @@ body {
   text-align: center;
   position: relative;
   background-color: transparent;
-  padding-left: 15px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* 순위 배지 */
+/* 랭킹 배지 */
 .rank-badge {
   position: absolute;
   top: 0px;
-  left: 10px;
+  left: 0px;
   background-color: #333;
   color: white;
   font-size: 12px;
@@ -131,63 +129,31 @@ body {
   border-radius: 12px;
   z-index: 2;
   min-width: 28px;
-  font-weight: bold;
+  line-height: 1.2;
 }
 
-/* 1~3위 특별 배지 색상 + 크기 + 볼드 + 메달 아이콘 */
 .rank-badge.gold,
 .rank-badge.silver,
 .rank-badge.bronze {
   background-color: transparent;
-  position: absolute;
-  top: -12px;
-  left: 0;
-  padding: 4px 8px;
-  border-radius: 12px;
-  z-index: 2;
-  min-width: 28px;
+  font-size: 30px;
+  padding: 0;
+  top: -5px;
+  width: 30px;
+  height: 30px;
 }
 
 .rank-badge.gold::before {
   content: "🥇";
-  font-size: 30px;
-  background-color: transparent;
-  position: absolute;
-  top: -12px;
-  left: 0;
-  padding: 4px 8px;
-  border-radius: 12px;
-  z-index: 2;
-  min-width: 28px;
 }
-
 .rank-badge.silver::before {
   content: "🥈";
-  font-size: 30px;
-  background-color: transparent;
-  position: absolute;
-  top: -12px;
-  left: 0;
-  padding: 4px 8px;
-  border-radius: 12px;
-  z-index: 2;
-  min-width: 28px;
 }
-
 .rank-badge.bronze::before {
   content: "🥉";
-  font-size: 30px;
-  background-color: transparent;
-  position: absolute;
-  top: -12px;
-  left: 0;
-  padding: 4px 8px;
-  border-radius: 12px;
-  z-index: 2;
-  min-width: 28px;
 }
 
-/* 상품 이미지 컨테이너 */
+/* 상품 이미지 및 정보 */
 .product-image {
   width: 140px;
   height: 140px;
@@ -208,7 +174,6 @@ body {
   padding: 10px;
 }
 
-/* 이미지가 없을 때 플레이스홀더 */
 .product-image:empty::before {
   content: "";
   width: 80px;
@@ -218,7 +183,6 @@ body {
   display: block;
 }
 
-/* 상품명 */
 .product-name {
   font-size: 13px;
   font-weight: 500;
@@ -231,36 +195,18 @@ body {
   text-align: center;
 }
 
-/* 상품 가격 */
 .product-price {
   font-size: 14px;
   font-weight: 700;
   color: #2d5a3d;
 }
 
-.product-card .price {
-  font-size: 16px;
-  font-weight: 700;
-  color: #2d5a3d;
-  margin: 0;
-}
-
-.product-card .original-price {
-  font-size: 12px;
-  color: #999;
-  text-decoration: line-through;
-  margin-right: 8px;
-}
-
+.product-card .original-price,
 .product-card .discount {
-  font-size: 16px;
-  color: #e74c3c;
-  font-weight: 600;
-  margin-left: 8px;
-  font-weight: bold;
+  display: none;
 }
 
-/* 반응형 디자인 */
+/* Responsive Design */
 @media (max-width: 1024px) {
   .products-grid {
     grid-template-columns: repeat(3, 1fr);
@@ -293,25 +239,11 @@ body {
     font-size: 13px;
   }
 
-  /* 모바일에서 메달 아이콘 크기 조정 */
-  .rank-badge.gold::before, /* 그룹화하여 중복 제거 */
-  .rank-badge.silver::before,
-  .rank-badge.bronze::before {
-    /* font-size는 각기 다르므로 개별 유지 */
-    position: absolute; /* 이미 상위에 정의됨, 여기서는 불필요 */
-    top: -8px; /* 모바일에서 위치 미세 조정 */
-    left: -5px; /* 모바일에서 위치 미세 조정 */
-    padding: 2px 4px; /* 모바일에서 패딩 조정 */
-  }
-  .rank-badge.gold::before {
+  .rank-badge.gold,
+  .rank-badge.silver,
+  .rank-badge.bronze {
     font-size: 24px;
   }
-  .rank-badge.silver::before {
-    font-size: 24px;
-  } /* 동일하게 맞추거나 약간 작게 */
-  .rank-badge.bronze::before {
-    font-size: 24px;
-  } /* 동일하게 맞추거나 약간 작게 */
 }
 
 @media (max-width: 480px) {
@@ -342,22 +274,13 @@ body {
     font-size: 11px;
     padding: 3px 7px;
     min-width: 24px;
+    top: 10px;
+    left: 5px;
   }
 
-  /* 작은 화면에서 메달 아이콘 더 작게 */
-  .rank-badge.gold::before,
-  .rank-badge.silver::before,
-  .rank-badge.bronze::before {
-    top: -6px; /* 더 작은 화면에서 위치 미세 조정 */
-    left: -4px; /* 더 작은 화면에서 위치 미세 조정 */
-  }
-  .rank-badge.gold::before {
-    font-size: 20px;
-  }
-  .rank-badge.silver::before {
-    font-size: 20px;
-  }
-  .rank-badge.bronze::before {
+  .rank-badge.gold,
+  .rank-badge.silver,
+  .rank-badge.bronze {
     font-size: 20px;
   }
 }
