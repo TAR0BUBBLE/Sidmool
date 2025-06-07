@@ -65,16 +65,16 @@
             <li><a href="/Products/products_cleansing.html">버블/클렌징</a></li>
             <li><a href="/Products/products_skin.html">스킨/토너/미스트</a></li>
             <li><a href="/Products/products_essence.html">앰플/에센스/세럼</a></li>
-            <li><a href=""></a>수분케어/로션</li>
-            <li><a href=""></a>로션/크림</li>
-            <li><a href=""></a>오일</li>
-            <li><a href=""></a>마스크/팩/필링</li>
-            <li><a href=""></a>썬케어</li>
-            <li><a href=""></a>바디/헤어/핸드/풋</li>
-            <li><a href=""></a>메이크업</li>
-            <li><a href=""></a>립/아이</li>
-            <li><a href=""></a>건강식품</li>
-            <li><a href=""></a>소품</li>
+            <li><a href="#">수분케어/로션</a></li>
+            <li><a href="#">로션/크림</a></li>
+            <li><a href="#">오일</a></li>
+            <li><a href="#">마스크/팩/필링</a></li>
+            <li><a href="#">썬케어</a></li>
+            <li><a href="#">바디/헤어/핸드/풋</a></li>
+            <li><a href="#">메이크업</a></li>
+            <li><a href="#">립/아이</a></li>
+            <li><a href="#">건강식품</a></li>
+            <li><a href="#스">소품</a></li>
         </ul>
     </div>
 
@@ -118,7 +118,6 @@
                 openPane.classList.remove('show');
                 root.querySelectorAll('.has-detail.active')
                     .forEach(el => el.classList.remove('active'));
-
             }
 
             /* 2단 트리거(제품별·성분별 …) */
@@ -133,7 +132,7 @@
                     if (isOpen) return;         // 이미 열려 있던 항목이면 끝
 
                     /* 열기 */
-                    pane.classList.add('show');
+                    pane.classList.add('show');  // 패널을 슬라이드 인
                     item.classList.add('active');     // 화살표 회전
                 });
             });
@@ -144,6 +143,7 @@
             });
 
         })();
+
     </script>
 
 

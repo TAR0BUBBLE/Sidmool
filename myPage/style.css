@@ -17,6 +17,17 @@ body {
 
 /* 메인 컨테이너 */
 .container {
+  display: flex; /* flexbox를 사용하여 섹션을 가로로 배치 */
+  justify-content: space-between; /* 왼쪽과 오른쪽 섹션 사이에 공간을 추가 */
+  gap: 0px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+/*------------------------------ My Page 헤더--------------------------------- */
+.myPage-header {
   max-width: 1200px;
   margin: 0 auto;
   margin-top: 100px;
@@ -24,10 +35,9 @@ body {
   text-align: center;
 }
 
-/* My Page 헤더 */
 .myPage-header h1 {
   color: black;
-  padding-bottom: 50px;
+  padding-bottom: 40px;
   margin-bottom: 0px;
   text-align: center;
   font-size: 30px;
@@ -68,6 +78,14 @@ body {
 
 /* 반응형 (옵션) */
 @media (max-width: 768px) {
+  .container {
+    flex-direction: column; /* 화면 크기가 작을 때는 세로로 쌓이게 설정 */
+    gap: 20px; /* 섹션 간의 간격을 설정 */
+  }
+
+  .mypage-nav {
+    flex-direction: column; /* 메뉴 네비게이션도 세로로 배치 */
+  }
   .mypage-nav ul {
     gap: 20px;
   }
@@ -79,4 +97,198 @@ body {
   .mypage-nav a {
     font-size: 14px;
   }
+}
+
+/* 마이페이지 전체 레이아웃 */
+.mypage-content {
+  display: flex;
+  gap: 30px;
+  margin-top: 50px;
+  justify-content: space-between; /* 좌우 정렬 */
+  align-items: flex-start;
+}
+
+/*------------------ 왼쪽 - 회원 정보 ------------------*/
+.member-info {
+  flex: 0.7;
+}
+
+/* 왼쪽: 회원 정보 */
+.left-section {
+  flex: 0.25; /* 왼쪽 영역의 너비 */
+}
+
+.member-box {
+  background: #fff;
+  border: 1px solid #ccc;
+  padding: 20px;
+  text-align: left;
+  border-radius: 6px;
+}
+
+.member-box h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.member-box p {
+  font-size: 13px;
+  margin-bottom: 20px;
+  color: #555;
+}
+
+.grade {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-top: 60px;
+  margin-bottom: 10px;
+}
+
+.grade img {
+  width: 20px;
+  height: 20px;
+}
+
+.grade span {
+  margin-left: 5px;
+  font-weight: bold;
+  color: #3b7205;
+}
+
+.member-box hr {
+  margin: 15px 0;
+  border: none;
+  border-top: 1px solid #ddd;
+}
+
+.member-box ul {
+  list-style: none;
+  padding: 0;
+}
+
+.member-box ul li {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.member-box button {
+  margin-top: 15px;
+  width: 100%;
+  background: #cbe3b2;
+  color: #333;
+  font-weight: 500;
+  border: 1px solid #1e1e1e;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.member-box button:hover {
+  background: #def7c2;
+}
+
+/*---------------------- 오른쪽 - 주문 정보--------------------------*/
+/* 오른쪽: 주문 내역 */
+.right-section {
+  flex: 0.72; /* 오른쪽 영역의 너비 */
+}
+
+.infos {
+  flex: 2;
+  background: #fff;
+  border: 1px solid #ccc;
+  padding: 20px;
+   margin-bottom: 100px !important;
+  border-radius: 6px;
+}
+
+.infos-header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.infos-header h2 {
+  font-size: 16px;
+}
+
+.infos-header a {
+  font-size: 13px;
+  color: #666;
+  text-decoration: none;
+}
+
+.infos hr {
+  margin: 0;
+  margin-bottom: 30px;
+  border: none;
+  border-top: 1px solid #ddd;
+}
+
+.order-status {
+  display: flex;
+  margin-bottom: 15px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.step {
+  text-align: center;
+  flex: 1;
+}
+
+.step img {
+  width: 30px;
+  height: 30px;
+  margin-bottom: 5px;
+}
+
+.step p {
+  font-size: 12px;
+  margin: 0;
+}
+
+.order-status span {
+  color: #999;
+  font-size: 20px;
+}
+
+/*------------------ 찜한 상품 ------------------*/
+
+
+.products {
+  display: flex;
+  gap: 15px;
+  justify-content: space-between;
+}
+
+.product-item {
+  text-align: center;
+  flex: 1;
+}
+
+.product-item img {
+  width: 100%;
+  height: auto;
+  max-width: 150px;
+}
+
+.product-item p {
+  font-size: 14px;
+  margin: 10px 0;
+  color:#5a4f3b;
+}
+
+.product-item .price {
+  font-size: 14px;
+  font-weight: bold;
+  color: #234214;
+}
+
+.product-item .discount {
+  color: #d67224;
+  font-size: 14px;
 }

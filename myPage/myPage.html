@@ -13,23 +13,149 @@
 <body>
     <div id="header-placeholder"></div>
 
+    <section class="myPage-header">
+        <h1>MY PAGE</h1>
+        <nav class="mypage-nav">
+            <ul>
+                <li><a href="#">출석체크</a></li>
+                <li><a href="#">나의 리뷰</a></li>
+                <li><a href="#">F & Q</a></li>
+                <li><a href="#">1:1 문의</a></li>
+                <li><a href="#">시드몰 페이</a></li>
+            </ul>
+        </nav>
+    </section>
+
 
     <main class="container">
-        <section class="myPage-header">
-            <h1>My Page</h1>
-            <nav class="mypage-nav">
-                <ul>
-                    <li><a href="#">출석체크</a></li>
-                    <li><a href="#">나의 리뷰</a></li>
-                    <li><a href="#">F & Q</a></li>
-                    <li><a href="#">1:1 문의</a></li>
-                    <li><a href="#">시드몰 페이</a></li>
-                </ul>
-            </nav>
-        </section>
+        <!-- 왼쪽: 회원 정보 -->
+        <div class="left-section">
+            <aside class="member-info">
+                <div class="member-box">
+                    <h2>민지 <span>님 안녕하세요 :)</span></h2>
+                    <p>민지님의 피부 고민은<br><strong>수부지 / 여드름 / 홍조 </strong>입니다.</p>
+                    <div class="grade">
+                        <img src="images/member_leaf.png" alt="등급 아이콘" />
+                        <span>입문 회원</span>
+                    </div>
+                    <hr>
+                    <ul>
+                        <li>적립금 <span>123원</span></li>
+                        <li>쿠폰 <span>2장</span></li>
+                        <li>누적 금액 <span>123,456원</span></li>
+                    </ul>
+                    <button>회원 정보 수정</button>
+                </div>
+            </aside>
+        </div>
 
+        <!-- 오른쪽: 주문 내역 / 배송 조회 -->
+        <div class="right-section">
+            <section class="infos order">
+                <div class="infos-header">
+                    <h2>주문 내역 / 배송 조회</h2>
+                    <a href="#">더보기 ></a>
+                </div>
 
+                <hr>
+
+                <div class="order-status">
+                    <div class="step">
+                        <img src="images/Check square.png" alt="">
+                        <p>주문접수</p>
+                    </div>
+                    <span>></span>
+                    <div class="step">
+                        <img src="images/Edit.png" alt="">
+                        <p>결제완료</p>
+                    </div>
+                    <span>></span>
+                    <div class="step">
+                        <img src="images/Gift.png" alt="">
+                        <p>배송준비중</p>
+                    </div>
+                    <span>></span>
+                    <div class="step">
+                        <img src="images/Package.png" alt="">
+                        <p>배송중</p>
+                    </div>
+                    <span>></span>
+                    <div class="step">
+                        <img src="images/Truck.png" alt="">
+                        <p>배송완료</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="infos likeandrecent">
+                <div class="infos-header">
+                    <h2>찜한 상품</h2>
+                    <a href="#">더보기 ></a>
+                </div>
+
+                <hr>
+                <!-- 찜한 상품 목록 시작 -->
+                <div class="products">
+                    <div class="product-item">
+                        <img src="images/product1.png" alt="상품 이미지">
+                        <p>닥터트러블 클렌징 밀크 200ml/500ml</p>
+                        <p class="price">13,600원 <span class="discount">23%</span></p>
+                    </div>
+                    <div class="product-item">
+                        <img src="images/product2.png" alt="상품 이미지">
+                        <p>어성초 수제 비누</p>
+                        <p class="price">2,400원</p>
+                    </div>
+                    <div class="product-item">
+                        <img src="images/product3.png" alt="상품 이미지">
+                        <p>[안자극 테스트 적합] <br />살구 페이셜 클렌징 오일 150ml</p>
+                        <p class="price">19,800원</p>
+                    </div>
+                    <div class="product-item">
+                        <img src="images/product4.png" alt="상품 이미지">
+                        <p>시드몰 웰빙 녹차 폼클렌징 120ml</p>
+                        <p class="price">3,500원</p>
+                    </div>
+                </div>
+                <!-- 찜한 상품 목록 끝 -->
+            </section>
+
+            <section class="infos likeandrecent">
+                <div class="infos-header">
+                    <h2>최근 본 상품</h2>
+                    <a href="#">더보기 ></a>
+                </div>
+
+                <hr>
+                <!-- 찜한 상품 목록 시작 -->
+                <div class="products">
+                    <div class="product-item">
+                        <img src="images/product5.png" alt="상품 이미지">
+                        <p>카렌듈라 더블 딥클렌징 오일 150ml</p>
+                        <p class="price">19,800원</p>
+                    </div>
+                    <div class="product-item">
+                        <img src="images/product6.png" alt="상품 이미지">
+                        <p>시드물 어성초 앰플 솝 100ml</p>
+                        <p class="price">9,800원</p>
+                    </div>
+                    <div class="product-item">
+                        <img src="images/product7.png" alt="상품 이미지">
+                        <p>닥터트럽 트러블 클렌져 <br />300ml/ 리필용 150ml</p>
+                        <p class="price">15,600원 <span class="discount">15%</span></p>
+                    </div>
+                    <div class="product-item">
+                        <img src="images/product8.png" alt="상품 이미지">
+                        <p>뽀얀 쌀겨 비누 100g <br />오리지널/베이비파우더향</p>
+                        <p class="price">2,400원</p>
+                    </div>
+                </div>
+                <!-- 찜한 상품 목록 끝 -->
+            </section>
+
+        </div>
     </main>
+
 
     <div id="footer-placeholder"></div>
 </body>

@@ -6,11 +6,6 @@
   color: #333;
 }
 
-a {
-  text-decoration: none;
-}
-
-
 .header {
   position: fixed; /* 화면 상단에 고정 */
   z-index: 9999;
@@ -212,8 +207,9 @@ button {
 
 /* 활성화(show) 상태 → 슬라이드 인 */
 .detail-pane.show {
-  transform: translateX(0);
+  transform: translateX(0); /* 보여줄 때 슬라이드 인 */
 }
+
 
 /* 제목(선택) 스타일 */
 .pane-title {
@@ -237,7 +233,16 @@ button {
   cursor: pointer;
 }
 
-.detail-pane ul li:hover {
+/* .detail-pane ul li:hover {
+  font-weight: 700;
+  color: #3b7205;
+} */
+
+.detail-pane ul li a {
+  text-decoration: none; /* 링크 밑줄 제거 */
+}
+
+.detail-pane ul li a:hover {
   font-weight: 700;
   color: #3b7205;
 }
