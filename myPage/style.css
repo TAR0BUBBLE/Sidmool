@@ -6,6 +6,10 @@
   color: #333;
 }
 
+a {
+  text-decoration: none;
+}
+
 body {
   background-color: #f3eee2;
   margin: 0;
@@ -200,11 +204,11 @@ body {
   background: #fff;
   border: 1px solid #ccc;
   padding: 20px;
-   margin-bottom: 100px !important;
+  margin-bottom: 100px !important;
   border-radius: 6px;
 }
 
-.infos-header{
+.infos-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -258,7 +262,6 @@ body {
 
 /*------------------ 찜한 상품 ------------------*/
 
-
 .products {
   display: flex;
   gap: 15px;
@@ -279,7 +282,7 @@ body {
 .product-item p {
   font-size: 14px;
   margin: 10px 0;
-  color:#5a4f3b;
+  color: #5a4f3b;
 }
 
 .product-item .price {

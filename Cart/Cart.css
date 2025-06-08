@@ -20,12 +20,14 @@ body {
 .cart-container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 40px 20px;
+  margin-top: 100px;
+  padding: 50px 20px;
+  /* text-align: center; */
 }
 
 .cart-title {
   color: black;
-  margin-bottom: 0px;
+  margin-bottom: 50px;
   text-align: center;
   font-size: 30px;
   font-family: Inter;
