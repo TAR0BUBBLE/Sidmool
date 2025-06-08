@@ -1,10 +1,27 @@
+/* =================================== */
+/* Global Settings & Resets            */
+/* =================================== */
+
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
 body {
   margin: 0;
   font-family: "Noto Sans KR", sans-serif, -apple-system, BlinkMacSystemFont,
     "Segoe UI", Roboto, sans-serif;
-  background-color: #f8f6f0;
+  background-color: #f3eee2; /* 공통 배경 페이지 컬러 */
   color: #333;
 }
+
+/* =================================== */
+/* Breadcrumb Navigation               */
+/* =================================== */
 
 .breadcrumb {
   margin-top: 80px;
@@ -18,7 +35,17 @@ body {
 .breadcrumb a {
   text-decoration: none;
   color: #666;
+  transition: color 0.2s ease, font-weight 0.2s ease;
 }
+
+.breadcrumb a:hover {
+  color: #3b7205; /* 공통 호버 시 글자 색 */
+  font-weight: 600; /* 공통 호버 시 font-weight */
+}
+
+/* =================================== */
+/* Main Page Layout                    */
+/* =================================== */
 
 .products-page {
   display: flex;
@@ -29,12 +56,18 @@ body {
   gap: 40px;
 }
 
+/* ======================================================= */
+/* Category Menu (최종 수정: 고정 높이와 Flexbox로 간격 보장) */
+/* ======================================================= */
+
 .category-menu {
+  width: 220px;
+  flex-shrink: 0; /* 컨테이너 너비 고정 */
+  box-sizing: border-box;
   background-color: #fff;
   border: 1px solid #e0e0e0;
   border-radius: 8px;
   padding: 24px;
-  width: 200px;
   height: fit-content;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
 }
@@ -42,14 +75,9 @@ body {
 .category-menu h2 {
   font-size: 16px;
   margin-bottom: 20px;
+  padding-left: 15px; /* 메뉴 항목과 왼쪽 정렬 맞춤 */
   font-weight: 600;
   color: #333;
-}
-
-.category-menu h2 span {
-  font-size: 14px;
-  color: #666;
-  font-weight: normal;
 }
 
 .category-menu ul {
@@ -59,38 +87,55 @@ body {
 }
 
 .category-menu li {
-  padding: 12px 0;
   font-size: 14px;
   cursor: pointer;
   border-bottom: 1px solid #f0f0f0;
-  transition: color 0.2s;
 }
 
-.category-menu li:hover {
-  color: #2d5a3d;
+.category-menu li:last-child {
+  border-bottom: none;
 }
 
+/* 메뉴 링크 기본 스타일 */
 .category-menu li a {
+  display: flex; /* ★ Flexbox 사용 */
+  align-items: center; /* ★ 텍스트를 세로 중앙으로 정렬 */
+  height: 44px; /* ★ 모든 항목의 높이를 44px로 여유 있게 고정 */
+  position: relative;
   text-decoration: none;
   color: #333;
   font-weight: normal;
-  display: block;
-  width: 100%;
+  padding: 0 8px 0 15px; /* 상하 패딩은 0으로 하고, 높이는 height 속성으로 제어 */
+  transition: color 0.2s ease, background-color 0.2s ease, font-weight 0.2s ease;
 }
 
+/* 메뉴 링크 호버 스타일 */
+.category-menu li a:hover {
+  color: #3b7205;
+  font-weight: 600;
+  background-color: #f7f9f7;
+}
+
+/* 활성 메뉴 링크 스타일 */
 .category-menu li.active a {
   font-weight: 600;
   color: #2d5a3d;
-  position: relative;
 }
 
-/* 왼쪽에 ▸ 기호 추가 */
+/* 활성 메뉴의 "▸" 기호 (Absolute Positioning으로 레이아웃 영향 없음) */
 .category-menu li.active a::before {
-  content: "▸ ";
+  content: "▸";
+  position: absolute;
+  left: 0px;
+  top: 50%;
+  transform: translateY(-50%);
   font-weight: bold;
   color: #2d5a3d;
-  margin-right: 4px;
 }
+
+/* =================================== */
+/* Product Content Area                */
+/* =================================== */
 
 .product-content {
   flex-grow: 1;
@@ -123,6 +168,7 @@ body {
   color: #666;
 }
 
+/* 정렬 옵션 */
 .sort-options {
   display: flex;
   gap: 20px;
@@ -139,6 +185,8 @@ body {
 
 .sort-options a:hover {
   background-color: #f0f0f0;
+  color: #3b7205;
+  font-weight: 600;
 }
 
 .sort-options .active {
@@ -147,11 +195,22 @@ body {
   background-color: #f0f7f2;
 }
 
+/* =================================== */
+/* Product Grid & Cards                */
+/* =================================== */
+
 .product-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 24px;
   margin-bottom: 32px;
+}
+
+/* 카드를 감싸는 a 태그 스타일 */
+.product-list.product-grid > a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
 }
 
 .product-card {
@@ -162,6 +221,9 @@ body {
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
   transition: transform 0.2s, box-shadow 0.2s;
   cursor: pointer;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .product-card:hover {
@@ -171,6 +233,7 @@ body {
 
 .product-card img {
   width: 100%;
+  max-width: 100%;
   height: 180px;
   object-fit: contain;
   border-radius: 8px;
@@ -186,8 +249,9 @@ body {
   line-height: 1.4;
   min-height: 40px;
   display: flex;
-  align-items: center;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
 }
 
 .product-card .volume {
@@ -201,6 +265,7 @@ body {
   font-weight: 700;
   color: #2d5a3d;
   margin: 0;
+  margin-top: auto;
 }
 
 .product-card .original-price {
@@ -217,7 +282,20 @@ body {
   margin-left: 8px;
 }
 
-/* 반응형 디자인 */
+/* =================================== */
+/* Custom & Utility Classes            */
+/* =================================== */
+
+.ample {
+  width: 150px;
+  height: auto;
+  padding-right: 60px;
+}
+
+/* =================================== */
+/* Responsive Design                   */
+/* =================================== */
+
 @media (max-width: 1024px) {
   .product-grid {
     grid-template-columns: repeat(3, 1fr);
@@ -232,29 +310,17 @@ body {
 
   .category-menu {
     width: 100%;
+    min-width: 0;
     margin-bottom: 20px;
   }
 
   .category-menu ul li a {
-    text-decoration: none;
-    color: #333;
-    font-weight: normal;
-    display: inline-block;
-    padding: 4px 0;
+    display: flex;
+    height: auto; /* 모바일에서는 자동 높이로 변경 */
+    padding: 12px 8px 12px 15px; /* 모바일용 패딩 */
   }
 
-  .category-menu ul li.active a {
-    font-weight: bold;
-    position: relative;
-  }
-
-  .category-menu ul li.active a::before {
-    content: "▸ ";
-    font-weight: bold;
-    color: #2d5a3d;
-    margin-right: 4px;
-  }
-  ㄴㄴ .product-grid {
+  .product-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 16px;
   }

@@ -1,212 +1,227 @@
 <!DOCTYPE html>
 <html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SKIN FIT RANKING</title>
+    <link rel="stylesheet" href="ranking.css" />
+    <link rel="stylesheet" href="/css/style_header.css" />
+    <link rel="stylesheet" href="/css/style_footer.css" />
+    <script defer src="ranking.js"></script>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SKIN FIT RANKING</title>
-  <link rel="stylesheet" href="ranking.css" />
-  <link rel="stylesheet" href="/css/style_header.css" />
-  <link rel="stylesheet" href="/css/style_footer.css" />
-  <script defer src="ranking.js"></script>
-</head>
+  <body>
+    <div id="header-placeholder"></div>
 
-<body>
-  <div id="header-placeholder"></div>
+    <main class="main-container">
+      <div class="ranking-section">
+        <h1 class="page-title">SKIN FIT RANKING</h1>
 
-  <main class="main-container">
-    <div class="ranking-section">
-      <h1 class="page-title">SKIN FIT RANKING</h1>
+        <div class="category-tabs">
+          <a class="tab" href="G.html">건성</a>
+          <a class="tab" href="Ju.html">중성</a>
+          <a class="tab" href="Ji.html">지성</a>
+          <a class="tab" href="M.html">민감성</a>
+          <a class="tab active" href="B.html">복합성</a>
+        </div>
 
-      <div class="category-tabs">
-        <a class="tab" href="G.html">건성</a>
-        <a class="tab" href="Ju.html">중성</a>
-        <a class="tab" href="Ji.html">지성</a>
-        <a class="tab" href="M.html">민감성</a>
-        <a class="tab active" href="B.html">복합성</a>
+        <div class="products-grid">
+          <!-- 1위 -->
+          <div class="product-card">
+            <div class="rank-badge gold"></div>
+            <div class="product-image">
+              <img src="B_image/1.png" alt="오리지널 웰빙 녹차스킨 150ml" />
+            </div>
+            <h3 class="product-name">오리지널 웰빙 녹차스킨<br />150ml</h3>
+            <p class="product-price">4,300원</p>
+          </div>
+
+          <!-- 2위 -->
+          <div class="product-card">
+            <div class="rank-badge silver"></div>
+            <div class="product-image">
+              <img src="B_image/2.png" alt="마다가스카르 리얼 수분크림 80g" />
+            </div>
+            <h3 class="product-name">마다가스카르 리얼<br />수분크림 80g</h3>
+            <p class="product-price">23,800원</p>
+          </div>
+
+          <!-- 3위 -->
+          <div class="product-card">
+            <div class="rank-badge bronze"></div>
+            <div class="product-image">
+              <img src="B_image/3.png" alt="시드물 꿀 펩타이드 수면팩 40ml" />
+            </div>
+            <h3 class="product-name">시드물 꿀 펩타이드<br />수면팩 40ml</h3>
+            <p class="product-price">9,800원</p>
+          </div>
+
+          <!-- 4위 -->
+          <div class="product-card">
+            <div class="rank-badge">04</div>
+            <div class="product-image">
+              <img
+                src="B_image/4.png"
+                alt="대용량 오리지널 웰빙 녹차 스킨 500ml"
+              />
+            </div>
+            <h3 class="product-name">
+              대용량 오리지널 웰빙<br />녹차 스킨 500ml
+            </h3>
+            <p class="product-price">12,800원</p>
+          </div>
+
+          <!-- 5위 -->
+          <div class="product-card">
+            <div class="rank-badge">05</div>
+            <div class="product-image">
+              <img
+                src="B_image/5.png"
+                alt="[제로마진] 웰빙 녹차 판테놀 스킨 150ml"
+              />
+            </div>
+            <h3 class="product-name">
+              [제로마진] 웰빙 녹차<br />판테놀 스킨 150ml
+            </h3>
+            <p class="price">
+              <span class="original-price">18,900원</span>
+              <span class="price-amount">5,800원</span>
+              <span class="discount">69%</span>
+            </p>
+          </div>
+
+          <!-- 6위 -->
+          <div class="product-card">
+            <div class="rank-badge">06</div>
+            <div class="product-image">
+              <img src="B_image/6.png" alt="센텔라 립 에센스 13ml" />
+            </div>
+            <h3 class="product-name">센텔라<br />립 에센스 13ml</h3>
+            <p class="product-price">4,600원</p>
+          </div>
+
+          <!-- 7위 -->
+          <div class="product-card">
+            <div class="rank-badge">07</div>
+            <div class="product-image">
+              <img
+                src="B_image/7.png"
+                alt="초저분자 히알루론산 수분 가득 물방울 미스트 60ml"
+              />
+            </div>
+            <h3 class="product-name">
+              초저분자 히알루론산<br />물방울 미스트 60ml
+            </h3>
+            <p class="product-price">15,800원</p>
+          </div>
+
+          <!-- 8위 -->
+          <div class="product-card">
+            <div class="rank-badge">08</div>
+            <div class="product-image">
+              <img src="B_image/8.png" alt="해바라기 클렌징 오일 300ml" />
+            </div>
+            <h3 class="product-name">해바라기 클렌징<br />오일 300ml</h3>
+            <p class="price">
+              <span class="original-price">34,400원</span>
+              <span class="price-amount">14,800원</span>
+              <span class="discount">56%</span>
+            </p>
+          </div>
+
+          <!-- 9위 -->
+          <div class="product-card">
+            <div class="rank-badge">09</div>
+            <div class="product-image">
+              <img
+                src="B_image/9.png"
+                alt="민중기 EFI 리바이브 더마 크림 60ml"
+              />
+            </div>
+            <h3 class="product-name">
+              민중기 EFI 리바이브<br />더마 크림 60ml
+            </h3>
+            <p class="product-price">32,800원</p>
+          </div>
+
+          <!-- 10위 -->
+          <div class="product-card">
+            <div class="rank-badge">10</div>
+            <div class="product-image">
+              <img src="B_image/10.png" alt="시드물 노니 수분 에센셜 165ml" />
+            </div>
+            <h3 class="product-name">시드물 노니 수분<br />에센셜 165ml</h3>
+            <p class="product-price">9,800원</p>
+          </div>
+
+          <!-- 11위 -->
+          <div class="product-card">
+            <div class="rank-badge">11</div>
+            <div class="product-image">
+              <img src="B_image/11.png" alt="닥터트럽 클렌징 밀크 티슈 20매" />
+            </div>
+            <h3 class="product-name">닥터트럽 클렌징 밀크<br />티슈 20매</h3>
+            <p class="product-price">2,000원</p>
+          </div>
+
+          <!-- 12위 -->
+          <div class="product-card">
+            <div class="rank-badge">12</div>
+            <div class="product-image">
+              <img
+                src="B_image/12.png"
+                alt="5나노 히알루론산 흡수 앰플 100ml"
+              />
+            </div>
+            <h3 class="product-name">5나노 히알루론산<br />흡수 앰플 100ml</h3>
+            <p class="product-price">16,800원</p>
+          </div>
+        </div>
       </div>
+    </main>
 
-      <div class="products-grid">
-        <!-- 1위 -->
-        <div class="product-card">
-          <div class="rank-badge gold">01</div>
-          <div class="product-image">
-            <img src="B_image/1.png" alt="오리지널 웰빙 녹차스킨 150ml" />
-          </div>
-          <h3 class="product-name">오리지널 웰빙 녹차스킨<br />150ml</h3>
-          <p class="product-price">4,300원</p>
-        </div>
+    <div id="footer-placeholder"></div>
+    <script>
+      const holder = document.getElementById("header-placeholder");
+      // header, footer 불러오기
+      /* ---- fetch & 삽입 ---- */
+      fetch("/header.html")
+        .then((r) => r.text())
+        .then((html) => {
+          const tpl = document.createElement("template");
+          tpl.innerHTML = html.trim();
+          holder.appendChild(tpl.content); // 마크업 삽입
 
-        <!-- 2위 -->
-        <div class="product-card">
-          <div class="rank-badge silver">02</div>
-          <div class="product-image">
-            <img src="B_image/2.png" alt="마다가스카르 리얼 수분크림 80g" />
-          </div>
-          <h3 class="product-name">마다가스카르 리얼<br />수분크림 80g</h3>
-          <p class="product-price">23,800원</p>
-        </div>
+          /* ---- (★) header.html 안 <script> 재실행 ---- */
+          execScripts(holder);
+        });
 
-        <!-- 3위 -->
-        <div class="product-card">
-          <div class="rank-badge bronze">03</div>
-          <div class="product-image">
-            <img src="B_image/3.png" alt="시드물 꿀 펩타이드 수면팩 40ml" />
-          </div>
-          <h3 class="product-name">시드물 꿀 펩타이드<br />수면팩 40ml</h3>
-          <p class="product-price">9,800원</p>
-        </div>
+      /* -------------- 헬퍼 -------------- */
+      function execScripts(scope) {
+        scope.querySelectorAll("script").forEach((src) => {
+          const s = document.createElement("script");
+          [...src.attributes].forEach((a) => s.setAttribute(a.name, a.value));
+          s.textContent = src.textContent;
+          document.head.appendChild(s);
+          src.remove(); // 메모리 누수 방지
+        });
+      }
 
-        <!-- 4위 -->
-        <div class="product-card">
-          <div class="rank-badge">04</div>
-          <div class="product-image">
-            <img src="B_image/4.png" alt="대용량 오리지널 웰빙 녹차 스킨 500ml" />
-          </div>
-          <h3 class="product-name">
-            대용량 오리지널 웰빙<br />녹차 스킨 500ml
-          </h3>
-          <p class="product-price">12,800원</p>
-        </div>
-
-        <!-- 5위 -->
-        <div class="product-card">
-          <div class="rank-badge">05</div>
-          <div class="product-image">
-            <img src="B_image/5.png" alt="[제로마진] 웰빙 녹차 판테놀 스킨 150ml" />
-          </div>
-          <h3 class="product-name">
-            [제로마진] 웰빙 녹차<br />판테놀 스킨 150ml
-          </h3>
-          <p class="price">
-            <span class="original-price">18,900원</span>
-            <span class="price-amount">5,800원</span>
-            <span class="discount">69%</span>
-          </p>
-        </div>
-
-        <!-- 6위 -->
-        <div class="product-card">
-          <div class="rank-badge">06</div>
-          <div class="product-image">
-            <img src="B_image/6.png" alt="센텔라 립 에센스 13ml" />
-          </div>
-          <h3 class="product-name">센텔라<br />립 에센스 13ml</h3>
-          <p class="product-price">4,600원</p>
-        </div>
-
-        <!-- 7위 -->
-        <div class="product-card">
-          <div class="rank-badge">07</div>
-          <div class="product-image">
-            <img src="B_image/7.png" alt="초저분자 히알루론산 수분 가득 물방울 미스트 60ml" />
-          </div>
-          <h3 class="product-name">
-            초저분자 히알루론산<br />물방울 미스트 60ml
-          </h3>
-          <p class="product-price">15,800원</p>
-        </div>
-
-        <!-- 8위 -->
-        <div class="product-card">
-          <div class="rank-badge">08</div>
-          <div class="product-image">
-            <img src="B_image/8.png" alt="해바라기 클렌징 오일 300ml" />
-          </div>
-          <h3 class="product-name">해바라기 클렌징<br />오일 300ml</h3>
-          <p class="price">
-            <span class="original-price">34,400원</span>
-            <span class="price-amount">14,800원</span>
-            <span class="discount">56%</span>
-          </p>
-        </div>
-
-        <!-- 9위 -->
-        <div class="product-card">
-          <div class="rank-badge">09</div>
-          <div class="product-image">
-            <img src="B_image/9.png" alt="민중기 EFI 리바이브 더마 크림 60ml" />
-          </div>
-          <h3 class="product-name">
-            민중기 EFI 리바이브<br />더마 크림 60ml
-          </h3>
-          <p class="product-price">32,800원</p>
-        </div>
-
-        <!-- 10위 -->
-        <div class="product-card">
-          <div class="rank-badge">10</div>
-          <div class="product-image">
-            <img src="B_image/10.png" alt="시드물 노니 수분 에센셜 165ml" />
-          </div>
-          <h3 class="product-name">시드물 노니 수분<br />에센셜 165ml</h3>
-          <p class="product-price">9,800원</p>
-        </div>
-
-        <!-- 11위 -->
-        <div class="product-card">
-          <div class="rank-badge">11</div>
-          <div class="product-image">
-            <img src="B_image/11.png" alt="닥터트럽 클렌징 밀크 티슈 20매" />
-          </div>
-          <h3 class="product-name">닥터트럽 클렌징 밀크<br />티슈 20매</h3>
-          <p class="product-price">2,000원</p>
-        </div>
-
-        <!-- 12위 -->
-        <div class="product-card">
-          <div class="rank-badge">12</div>
-          <div class="product-image">
-            <img src="B_image/12.png" alt="5나노 히알루론산 흡수 앰플 100ml" />
-          </div>
-          <h3 class="product-name">5나노 히알루론산<br />흡수 앰플 100ml</h3>
-          <p class="product-price">16,800원</p>
-        </div>
-      </div>
-    </div>
-  </main>
-
-  <div id="footer-placeholder"></div>
-  <script>
-    const holder = document.getElementById('header-placeholder');
-    // header, footer 불러오기
-    /* ---- fetch & 삽입 ---- */
-    fetch('/header.html')
-      .then(r => r.text())
-      .then(html => {
-        const tpl = document.createElement('template');
-        tpl.innerHTML = html.trim();
-        holder.appendChild(tpl.content);      // 마크업 삽입
-
-        /* ---- (★) header.html 안 <script> 재실행 ---- */
-        execScripts(holder);
+      // footer 로드
+      fetch("../footer.html")
+        .then((r) => r.text())
+        .then(
+          (t) => (document.querySelector("#footer-placeholder").innerHTML = t)
+        );
+      // 탭 기능
+      document.querySelectorAll(".tab").forEach((tab) => {
+        tab.addEventListener("click", function () {
+          document
+            .querySelectorAll(".tab")
+            .forEach((t) => t.classList.remove("active"));
+          this.classList.add("active");
+        });
       });
-
-    /* -------------- 헬퍼 -------------- */
-    function execScripts(scope) {
-      scope.querySelectorAll('script').forEach(src => {
-        const s = document.createElement('script');
-        [...src.attributes].forEach(a => s.setAttribute(a.name, a.value));
-        s.textContent = src.textContent;
-        document.head.appendChild(s);
-        src.remove();                         // 메모리 누수 방지
-      });
-    }
-
-    // footer 로드
-    fetch('../footer.html')
-      .then(r => r.text())
-      .then(t => document.querySelector('#footer-placeholder').innerHTML = t);
-    // 탭 기능
-    document.querySelectorAll(".tab").forEach((tab) => {
-      tab.addEventListener("click", function () {
-        document
-          .querySelectorAll(".tab")
-          .forEach((t) => t.classList.remove("active"));
-        this.classList.add("active");
-      });
-    });
-  </script>
-</body>
-
+    </script>
+  </body>
 </html>

@@ -47,7 +47,6 @@ document.addEventListener("DOMContentLoaded", () => {
     setActiveSort(e.target);
   });
 
-  // 판매량순, 리뷰순은 기능 없이 active만 처리
   document.querySelector(".sort-default").addEventListener("click", (e) => {
     e.preventDefault();
     setActiveSort(e.target);
@@ -58,3 +57,31 @@ document.addEventListener("DOMContentLoaded", () => {
     setActiveSort(e.target);
   });
 });
+
+function extractPrice(text) {
+  return parseInt(text.replace(/[^0-9]/g, ""), 10) || 0;
+}
+
+function sortProducts(order = "asc") {
+  const container = document.querySelector(".product-list");
+  const cards = Array.from(container.querySelectorAll(".product-card"));
+
+  const sortedCards = cards.sort((a, b) => {
+    const priceA = extractPrice(
+      a.querySelector(".price-amount")?.textContent || ""
+    );
+    const priceB = extractPrice(
+      b.querySelector(".price-amount")?.textContent || ""
+    );
+    return order === "asc" ? priceA - priceB : priceB - priceA;
+  });
+
+  container.innerHTML = "";
+  sortedCards.forEach((card) => container.appendChild(card));
+}
+
+function setActiveSort(target) {
+  const allSorts = document.querySelectorAll(".sort-options a");
+  allSorts.forEach((el) => el.classList.remove("active"));
+  target.classList.add("active");
+}
