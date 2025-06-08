@@ -1,191 +1,190 @@
 <!DOCTYPE html>
 <html lang="ko">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Cart - SIDMOOL</title>
-    <link rel="stylesheet" href="Cart.css" />
-    <link rel="stylesheet" href="/css/style_header.css" />
-    <link rel="stylesheet" href="/css/style_footer.css" />
-    <script defer src="Cart.js"></script>
-  </head>
-  <body>
-    <div id="header-placeholder"></div>
-    <main class="cart-container">
-      <h1 class="cart-title">CART</h1>
-      <nav class="order-progress">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sidmool</title>
+  <link rel="stylesheet" href="Cart.css" />
+  <link rel="stylesheet" href="/css/style_header.css" />
+  <link rel="stylesheet" href="/css/style_footer.css" />
+  <script defer src="Cart.js"></script>
+</head>
+
+<body>
+  <div id="header-placeholder"></div>
+  <main class="cart-container">
+    <h1 class="cart-title">CART</h1>
+    <nav class="order-progress">
+      <ul>
+        <li><span>01 장바구니</span></li>
+        <li><span>02 주문/결제</span></li>
+        <li><span>03 주문완료</span></li>
+      </ul>
+    </nav>
+
+    <div class="cart-content">
+      <div class="cart-main">
+        <table class="cart-table">
+          <thead>
+            <tr>
+              <th style="width: 40px"></th>
+              <th style="text-align: center">상품명</th>
+              <th style="width: 100px">수량</th>
+              <th style="width: 80px">적립금</th>
+              <th style="width: 100px">가격</th>
+              <th style="width: 80px"></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><input type="checkbox" checked /></td>
+              <td class="product-info">
+                <img src="Cart_image/1.png" alt="닥터트럽 클렌징 밀크" class="eoseongcho-image" />
+                <div class="product-details">
+                  <div class="product-name">닥터트럽 클렌징 밀크</div>
+                  <div class="product-desc">
+                    옵션 : 닥터트럽 클렌징 밀크 200ml
+                  </div>
+                </div>
+              </td>
+              <td>
+                <div class="quantity-control">
+                  <button>-</button>
+                  <span>1</span>
+                  <button>+</button>
+                </div>
+              </td>
+              <td>280원</td>
+              <td><strong>13,600원</strong></td>
+              <td><button class="delete-btn">삭제하기</button></td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" checked /></td>
+              <td class="product-info">
+                <img src="Cart_image/2.png" alt="어성초 수제 비누" />
+                <div class="product-details">
+                  <div class="product-name">어성초 수제 비누</div>
+                  <div class="product-desc">옵션 : 어성초 비누</div>
+                </div>
+              </td>
+              <td>
+                <div class="quantity-control">
+                  <button>-</button>
+                  <span>1</span>
+                  <button>+</button>
+                </div>
+              </td>
+              <td>50원</td>
+              <td><strong>2,400원</strong></td>
+              <td><button class="delete-btn">삭제하기</button></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="cart-actions">
+          <button>쇼핑 계속하기</button>
+          <button>선택 상품 삭제</button>
+          <button>장바구니 비우기</button>
+        </div>
+      </div>
+
+      <div class="cart-sidebar">
+        <div class="cart-summary">
+          <div class="summary-item">
+            <span>총 상품금액</span>
+            <span>16,000원</span>
+          </div>
+          <div class="summary-item">
+            <span>배송비</span>
+            <span>2,500원</span>
+          </div>
+          <div class="summary-item total">
+            <span>결제예정 금액</span>
+            <span class="highlight">18,500원</span>
+          </div>
+          <div class="summary-note">
+            * 20,000원 미만의 주문은 배송료가 부과됩니다.
+          </div>
+
+          <div class="cart-buttons">
+            <button class="btn-primary">선택 상품 주문</button>
+            <button class="btn-secondary">전체 상품 주문</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="cart-notices">
+      <div class="notice-box">
+        <h3>반품 환불 규정</h3>
         <ul>
-          <li><span>01 장바구니</span></li>
-          <li><span>02 주문/결제</span></li>
-          <li><span>03 주문완료</span></li>
+          <li>
+            제품이 맞지 않아 반품을 하는 경우, 제품 수령 후
+            <strong>20일 이내</strong>에 제품이
+            <strong>2/3 이상</strong> 남아있는 경우에만 반품 및 환불이
+            가능합니다.
+          </li>
+          <li>
+            개봉 후 새 제품은 원칙적으로 환불이 되지 않지만, 피부 자극이나
+            피부과 전문의의 소견서를 <strong>help@sidmool.com</strong>으로
+            보내 주시고, 상담실로 문의 주시면 확인 후 답변드리겠습니다.
+          </li>
         </ul>
-      </nav>
-
-      <div class="cart-content">
-        <div class="cart-main">
-          <table class="cart-table">
-            <thead>
-              <tr>
-                <th style="width: 40px"></th>
-                <th style="text-align: center">상품명</th>
-                <th style="width: 100px">수량</th>
-                <th style="width: 80px">적립금</th>
-                <th style="width: 100px">가격</th>
-                <th style="width: 80px"></th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td><input type="checkbox" checked /></td>
-                <td class="product-info">
-                  <img
-                    src="Cart_image/1.png"
-                    alt="닥터트럽 클렌징 밀크"
-                    class="eoseongcho-image"
-                  />
-                  <div class="product-details">
-                    <div class="product-name">닥터트럽 클렌징 밀크</div>
-                    <div class="product-desc">
-                      옵션 : 닥터트럽 클렌징 밀크 200ml
-                    </div>
-                  </div>
-                </td>
-                <td>
-                  <div class="quantity-control">
-                    <button>-</button>
-                    <span>1</span>
-                    <button>+</button>
-                  </div>
-                </td>
-                <td>280원</td>
-                <td><strong>13,600원</strong></td>
-                <td><button class="delete-btn">삭제하기</button></td>
-              </tr>
-              <tr>
-                <td><input type="checkbox" checked /></td>
-                <td class="product-info">
-                  <img src="Cart_image/2.png" alt="어성초 수제 비누" />
-                  <div class="product-details">
-                    <div class="product-name">어성초 수제 비누</div>
-                    <div class="product-desc">옵션 : 어성초 비누</div>
-                  </div>
-                </td>
-                <td>
-                  <div class="quantity-control">
-                    <button>-</button>
-                    <span>1</span>
-                    <button>+</button>
-                  </div>
-                </td>
-                <td>50원</td>
-                <td><strong>2,400원</strong></td>
-                <td><button class="delete-btn">삭제하기</button></td>
-              </tr>
-            </tbody>
-          </table>
-
-          <div class="cart-actions">
-            <button>쇼핑 계속하기</button>
-            <button>선택 상품 삭제</button>
-            <button>장바구니 비우기</button>
-          </div>
-        </div>
-
-        <div class="cart-sidebar">
-          <div class="cart-summary">
-            <div class="summary-item">
-              <span>총 상품금액</span>
-              <span>16,000원</span>
-            </div>
-            <div class="summary-item">
-              <span>배송비</span>
-              <span>2,500원</span>
-            </div>
-            <div class="summary-item total">
-              <span>결제예정 금액</span>
-              <span class="highlight">18,500원</span>
-            </div>
-            <div class="summary-note">
-              * 20,000원 미만의 주문은 배송료가 부과됩니다.
-            </div>
-
-            <div class="cart-buttons">
-              <button class="btn-primary">선택 상품 주문</button>
-              <button class="btn-secondary">전체 상품 주문</button>
-            </div>
-          </div>
-        </div>
       </div>
-
-      <div class="cart-notices">
-        <div class="notice-box">
-          <h3>반품 환불 규정</h3>
-          <ul>
-            <li>
-              제품이 맞지 않아 반품을 하는 경우, 제품 수령 후
-              <strong>20일 이내</strong>에 제품이
-              <strong>2/3 이상</strong> 남아있는 경우에만 반품 및 환불이
-              가능합니다.
-            </li>
-            <li>
-              개봉 후 새 제품은 원칙적으로 환불이 되지 않지만, 피부 자극이나
-              피부과 전문의의 소견서를 <strong>help@sidmool.com</strong>으로
-              보내 주시고, 상담실로 문의 주시면 확인 후 답변드리겠습니다.
-            </li>
-          </ul>
-        </div>
-        <div class="notice-box">
-          <h3>배송 관련 공지</h3>
-          <ul>
-            <li>
-              시드물은 <strong>20,000원 이상</strong> 구입 시 무료 배송입니다.
-            </li>
-            <li>
-              우체국 택배를 이용하며, 산간/도서/울릉도/제주도/군부대 모두 안전한
-              배송을 해드립니다. (건강 주스 제품은 CJ택배 이용)
-            </li>
-            <li>
-              월요일 오전 10시, 화~금 낮 1시, 토요일 오전 9시<br />(일부 도서
-              산간지역은 1~2일 지연될 수 있음)
-            </li>
-          </ul>
-        </div>
+      <div class="notice-box">
+        <h3>배송 관련 공지</h3>
+        <ul>
+          <li>
+            시드물은 <strong>20,000원 이상</strong> 구입 시 무료 배송입니다.
+          </li>
+          <li>
+            우체국 택배를 이용하며, 산간/도서/울릉도/제주도/군부대 모두 안전한
+            배송을 해드립니다. (건강 주스 제품은 CJ택배 이용)
+          </li>
+          <li>
+            월요일 오전 10시, 화~금 낮 1시, 토요일 오전 9시<br />(일부 도서
+            산간지역은 1~2일 지연될 수 있음)
+          </li>
+        </ul>
       </div>
-    </main>
+    </div>
+  </main>
 
-    <div id="footer-placeholder"></div>
-    <script type="module">
-      const holder = document.getElementById("header-placeholder");
-      // header, footer 불러오기
-      /* ---- fetch & 삽입 ---- */
-      fetch("/header.html") // header.html 경로는 사이트 루트 기준입니다.
-        .then((r) => r.text())
-        .then((html) => {
-          const tpl = document.createElement("template");
-          tpl.innerHTML = html.trim();
-          holder.appendChild(tpl.content); // 마크업 삽입
+  <div id="footer-placeholder"></div>
+  <script type="module">
+    const holder = document.getElementById("header-placeholder");
+    // header, footer 불러오기
+    /* ---- fetch & 삽입 ---- */
+    fetch("/header.html") // header.html 경로는 사이트 루트 기준입니다.
+      .then((r) => r.text())
+      .then((html) => {
+        const tpl = document.createElement("template");
+        tpl.innerHTML = html.trim();
+        holder.appendChild(tpl.content); // 마크업 삽입
 
-          /* ---- (★) header.html 안 <script> 재실행 ---- */
-          execScripts(holder);
-        });
+        /* ---- (★) header.html 안 <script> 재실행 ---- */
+        execScripts(holder);
+      });
 
-      /* -------------- 헬퍼 -------------- */
-      function execScripts(scope) {
-        scope.querySelectorAll("script").forEach((src) => {
-          const s = document.createElement("script");
-          [...src.attributes].forEach((a) => s.setAttribute(a.name, a.value));
-          s.textContent = src.textContent;
-          document.head.appendChild(s);
-          src.remove(); // 메모리 누수 방지
-        });
-      }
+    /* -------------- 헬퍼 -------------- */
+    function execScripts(scope) {
+      scope.querySelectorAll("script").forEach((src) => {
+        const s = document.createElement("script");
+        [...src.attributes].forEach((a) => s.setAttribute(a.name, a.value));
+        s.textContent = src.textContent;
+        document.head.appendChild(s);
+        src.remove(); // 메모리 누수 방지
+      });
+    }
 
-      // footer 로드
-      fetch("../footer.html") // footer.html 경로는 현재 HTML 파일 위치 기준 상위 폴더입니다. 실제 경로에 맞게 수정 필요할 수 있습니다.
-        .then((r) => r.text())
-        .then(
-          (t) => (document.querySelector("#footer-placeholder").innerHTML = t)
-        );
-    </script>
-  </body>
+    // footer 로드
+    fetch("../footer.html") // footer.html 경로는 현재 HTML 파일 위치 기준 상위 폴더입니다. 실제 경로에 맞게 수정 필요할 수 있습니다.
+      .then((r) => r.text())
+      .then(
+        (t) => (document.querySelector("#footer-placeholder").innerHTML = t)
+      );
+  </script>
+</body>
+
 </html>
