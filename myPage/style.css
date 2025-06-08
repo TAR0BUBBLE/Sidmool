@@ -271,8 +271,8 @@ body {
 }
 
 .product-item img {
-  width: 100%;
-  height: auto;
+  width: 200px;
+  height: 163px;
   max-width: 150px;
 }
 

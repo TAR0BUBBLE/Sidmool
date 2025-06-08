@@ -11,8 +11,6 @@
 <body>
     <div id="header-placeholder"></div>
 
-
-
     <!-- 배너 이미지 및 화살표 버튼 -->
     <section class="hero">
         <!-- 좌·우 네비게이션 -->
@@ -87,46 +85,97 @@
 
             <div class="recommended-right">
                 <div class="filter-buttons">
-                    <button><strong>스킨 / 토너 / 미스트</strong></button>
-                    <button><strong>앰플 / 에센스 / 세럼</strong></button>
-                    <button><strong>로션 / 크림</strong></button>
-                    <button><strong>오일</strong></button>
+                    <button class="skin" data-filter="skin"><strong>스킨 / 토너 / 미스트</strong></button>
+                    <button class="ampoule" data-filter="ampoule"><strong>앰플 / 에센스 / 세럼</strong></button>
+                    <button class="lotion" data-filter="lotion"><strong>로션</strong></button>
+                    <button class="cream" data-filter="cream"><strong>크림</strong></button>
+                    <button class="gel" data-filter="gel"><strong>수분젤 / 에센셜</strong></button>
+                    <button class="oil" data-filter="oil"><strong>오일</strong></button>
                 </div>
 
                 <div class="recommended-list">
-                    <div class="recommended-item">
-                        <span class="rank">1</span>
-                        <img src="images/recommend_product/product1.png" alt="아크바이TM 스킨 500ml" />
-                        <div class="product-info">
-                            <p class="product-name">아크바이TM 스킨 500ml</p>
-                            <p class="product-price">22,600원</p>
-                            <p class="product-comments"><img src="images/recommend_product/Review.png" alt="댓글 아이콘" />
-                                5,375</p>
+                    <div class="recommended-list-by-skin" data-category="skin">
+                        <div class="recommended-item">
+                            <span class="rank">1</span>
+                            <img src="images/recommend_product/product1.png" alt="아크바이TM 스킨 500ml" />
+                            <div class="product-info">
+                                <p class="product-name">아크바이TM 스킨 500ml</p>
+                                <p class="product-price">22,600원</p>
+                                <p class="product-comments"><img src="images/recommend_product/Review.png"
+                                        alt="댓글 아이콘" />
+                                    5,375</p>
+                            </div>
+                        </div>
+
+                        <div class="recommended-item">
+                            <span class="rank">2</span>
+                            <img src="images/recommend_product/product2.png" alt="콜라겐 아데노신 앰플 토너 210ml" />
+                            <div class="product-info">
+                                <p class="product-name">콜라겐 아데노신 앰플 토너 210ml</p>
+                                <p class="product-price">12,600원</p>
+                                <p class="product-comments"><img src="images/recommend_product/Review.png"
+                                        alt="댓글 아이콘" />
+                                    647</p>
+                            </div>
+                        </div>
+
+                        <div class="recommended-item">
+                            <span class="rank">3</span>
+                            <img src="images/recommend_product/product3.png" alt="엑토인 시카 에센스 토너 210ml" />
+                            <div class="product-info">
+                                <p class="product-name">엑토인 시카 에센스 토너 210ml</p>
+                                <p class="product-price">15,000원</p>
+                                <p class="product-comments"><img src="images/recommend_product/Review.png"
+                                        alt="댓글 아이콘" />
+                                    379</p>
+                            </div>
                         </div>
                     </div>
 
-                    <div class="recommended-item">
-                        <span class="rank">2</span>
-                        <img src="images/recommend_product/product2.png" alt="콜라겐 아데노신 앰플 토너 210ml" />
-                        <div class="product-info">
-                            <p class="product-name">콜라겐 아데노신 앰플 토너 210ml</p>
-                            <p class="product-price">12,600원</p>
-                            <p class="product-comments"><img src="images/recommend_product/Review.png" alt="댓글 아이콘" />
-                                647</p>
+                    <div class="recommended-list-by-ampoule" data-category="ampoule">
+                        <div class="recommended-item">
+                            <span class="rank">1</span>
+                            <img src="images/recommend_product/product4.png" alt="사카로 광채 앰플 100ml" />
+                            <div class="product-info">
+                                <p class="product-name">사카로 광채 앰플 100ml</p>
+                                <p class="product-price">30,870원</p>
+                                <p class="product-comments"><img src="images/recommend_product/Review.png"
+                                        alt="댓글 아이콘" />
+                                    4,115</p>
+                            </div>
+                        </div>
+
+                        <div class="recommended-item">
+                            <span class="rank">2</span>
+                            <img src="images/recommend_product/product5.png" alt="달팽이 브라이트닝 리포좀 에센스 60ml" />
+                            <div class="product-info">
+                                <p class="product-name">달팽이 브라이트닝 리포좀 에센스 60ml</p>
+                                <p class="product-price">22,800원</p>
+                                <p class="product-comments"><img src="images/recommend_product/Review.png"
+                                        alt="댓글 아이콘" />
+                                    1147</p>
+                            </div>
+                        </div>
+
+                        <div class="recommended-item">
+                            <span class="rank">3</span>
+                            <img src="images/recommend_product/product6.png" alt="데일리 포어 클리닉 디졸브 100ml/타이트닝 에센스 60ml" />
+                            <div class="product-info">
+                                <p class="product-name">데일리 포어 클리닉 디졸브 100ml/타이트닝 에센스 60ml</p>
+                                <p class="product-price">13,700원</p>
+                                <p class="product-comments"><img src="images/recommend_product/Review.png"
+                                        alt="댓글 아이콘" />
+                                    670</p>
+                            </div>
                         </div>
                     </div>
 
-                    <div class="recommended-item">
-                        <span class="rank">3</span>
-                        <img src="images/recommend_product/product3.png" alt="엑토인 시카 에센스 토너 210ml" />
-                        <div class="product-info">
-                            <p class="product-name">엑토인 시카 에센스 토너 210ml</p>
-                            <p class="product-price">15,000원</p>
-                            <p class="product-comments"><img src="images/recommend_product/Review.png" alt="댓글 아이콘" />
-                                379</p>
-                        </div>
+                    <div class="recommended-list-by-lotion" data-category="lotion">
+                        <!-- 로션 제품들 -->
                     </div>
+                    <!-- 나머지 카테고리들도 추가 -->
                 </div>
+
             </div>
         </div>
     </section>
@@ -333,6 +382,31 @@
             slider.scrollLeft = scrollLeft - walk;
         });
 
+        // ---------------- ranking filter 기능 -------------
+        document.addEventListener('DOMContentLoaded', () => {
+            const buttons = document.querySelectorAll('.filter-buttons button'); // 모든 버튼 선택
+            const recommendedLists = document.querySelectorAll('.recommended-list > div'); // 모든 제품 리스트 선택
+
+            buttons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const filterValue = button.getAttribute('data-filter'); // 버튼의 data-filter 값 가져오기
+
+                    // 모든 제품 리스트 숨기기
+                    recommendedLists.forEach(list => {
+                        list.style.display = 'none'; // 숨기기
+                    });
+
+                    // 선택된 필터 값에 해당하는 제품 리스트만 보여주기
+                    const filteredList = document.querySelector(`.recommended-list-by-${filterValue}`); // 선택된 카테고리 찾기
+                    if (filteredList) {
+                        filteredList.style.display = 'block'; // 보여주기
+                    }
+                });
+            });
+
+            // 기본적으로 '스킨' 제품들을 먼저 보이도록 설정
+            document.querySelector('.recommended-list-by-skin').style.display = 'block';
+        });
 
     </script>
 </body>

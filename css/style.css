@@ -177,7 +177,7 @@ body {
 .recommended-product h2 {
   font-weight: 700;
   font-size: 28px;
-  margin-top: 80px;
+  margin-top: 40px;
   margin-bottom: 40px;
 }
 
@@ -238,7 +238,7 @@ body {
 
 .filter-buttons button:hover,
 .filter-buttons button:focus {
-  background-color: #b9db56;
+  background-color: #cbe3b2;
   color: white;
   outline: none;
 }
@@ -253,12 +253,22 @@ body {
   padding-right: 10px; /* 스크롤바 여백 */
 }
 
+.recommended-list > div {
+  display: none; /* 기본적으로 모든 카테고리를 숨깁니다 */
+}
+
+.recommended-list-by-skin {
+  display: block; /* 초기 화면에서는 '스킨' 제품만 보이게 합니다 */
+}
+
+
 /* 개별 아이템 */
 .recommended-item {
   display: flex;
   align-items: center;
   border-bottom: 1px solid #ccc;
   padding-bottom: 15px;
+  margin-top: 10px
 }
 
 .rank {
