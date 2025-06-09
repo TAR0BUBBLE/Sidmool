@@ -16,10 +16,10 @@ body {
     align-items: flex-start;
     padding: 50px;
     gap: 40px;
-    margin-top: 100px;
+    margin: 80px 0px 100px;
 }
 .login-box, .benefit-box {
-    width: 500px;
+    width: 600px;
     padding: 40px;
     background-color: rgba(255, 255, 255, 0.5);
     border-radius: 10px;
@@ -32,16 +32,19 @@ body {
     justify-content: space-between;
     gap: 40px;
 }
+.benefit-item-box p {
+    font-size: 20px;
+}
 h2 {
-    font-size: 30px;
+    font-size: 40px;
     margin-bottom: 120px;
     text-align: center;
-    
+    font-weight: 500;
 }
 label {
     display: flex;
-    margin: 10px 0 0px;
-    font-size: 14px;
+    margin: 20px 10px 0px;
+    font-size: 16px;
 }
 input[type="text"], input[type="password"] {
     width: 100%;
@@ -49,13 +52,14 @@ input[type="text"], input[type="password"] {
     border: none;
     border-bottom: 1px solid #b2d235;
     background-color: transparent;
+    font-size: 15px;
 }
 
 .find-links {
     font-size: 12px;
     text-align: right;
     margin-top: 7px;
-    margin-bottom: 60px;
+    margin-bottom: 70px;
 }
 .btn-login {
     width: 100%;
@@ -64,7 +68,7 @@ input[type="text"], input[type="password"] {
     background-color: #d3e97a;
     border: none;
     padding: 15px;
-    font-size: 18px;
+    font-size: 20px;
     cursor: pointer;
     margin-bottom: 10px;
 }
@@ -74,11 +78,11 @@ input[type="text"], input[type="password"] {
     border: 1px solid #d3e97a;
     background-color: transparent;
     padding: 15px;
-    font-size: 18px;
+    font-size: 20px;
     cursor: pointer;
 }
 .benefit-title {
-    font-size: 24px;
+    font-size: 30px;
     padding-bottom: 5px;
     margin: 0px 7px 7px;
 }
@@ -88,7 +92,7 @@ input[type="text"], input[type="password"] {
 }
 hr {
     border:1px solid #b2d235;
-    margin-bottom: 60px;
+    margin-bottom: 80px;
 }
 .benefit-item {
     display:flex;
@@ -107,7 +111,7 @@ hr {
 }
 .benefit-item span{
     margin-top: 10px;
-    font-size: 10px;
+    font-size: 13px;
 }
 .sns-login button {
     width: 100%;
@@ -116,7 +120,7 @@ hr {
     border: 1px solid #d3e97a;
     border-radius: 6px;
     background: rgba(255, 255, 255, 0.5);
-    font-size: 18px;
+    font-size: 20px;
     display: flex;
     align-items: center;
     gap: 10px;
