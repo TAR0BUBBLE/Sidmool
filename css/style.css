@@ -177,7 +177,7 @@ body {
 .recommended-product h2 {
   font-weight: 700;
   font-size: 28px;
-  margin-top: 40px;
+  margin-top: 100px;
   margin-bottom: 40px;
 }
 
@@ -261,14 +261,13 @@ body {
   display: block; /* 초기 화면에서는 '스킨' 제품만 보이게 합니다 */
 }
 
-
 /* 개별 아이템 */
 .recommended-item {
   display: flex;
   align-items: center;
   border-bottom: 1px solid #ccc;
   padding-bottom: 15px;
-  margin-top: 10px
+  margin-top: 10px;
 }
 
 .rank {

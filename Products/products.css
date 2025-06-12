@@ -25,6 +25,7 @@ body {
 
 .breadcrumb {
   margin-top: 80px;
+  margin-bottom: 40px;
   padding: 16px 40px;
   font-size: 14px;
   color: #666;
@@ -73,10 +74,10 @@ body {
 }
 
 .category-menu h2 {
-  font-size: 16px;
-  margin-bottom: 20px;
-  padding-left: 15px; /* 메뉴 항목과 왼쪽 정렬 맞춤 */
-  font-weight: 600;
+  font-size: 18px;
+  margin-bottom: 18px;
+  padding-left: 0px; /* 메뉴 항목과 왼쪽 정렬 맞춤 */
+  font-weight: 800;
   color: #333;
 }
 
@@ -202,7 +203,7 @@ body {
 .product-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 24px;
+  gap: 32px;
   margin-bottom: 32px;
 }
 
