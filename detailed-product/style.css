@@ -147,12 +147,16 @@ del {
 .buy {
     padding: 10px 80px;
     border: none;
-    background: #9CAF88;
-    border: 1px solid #333;
+    background: #cbe3b2;
+    border: 1px solid #1e1e1e;
     color: #333;
-    border-radius: 3px;
+    border-radius: 4px;
     cursor: pointer;
     font-size: 14px;
+}
+
+.cart:hover, .buy:hover {
+  background-color: #def7c2;
 }
 
 /* 상세 정보 */
