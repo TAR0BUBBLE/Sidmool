@@ -486,6 +486,7 @@ del {
 
 .review-filter span strong {
     font-size: 20px;
+    margin-right: 8px;
 }
 
 .review-filter-select {
