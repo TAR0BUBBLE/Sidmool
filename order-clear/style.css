@@ -1,0 +1,93 @@
+    * {
+        font-size: 20px;
+    }
+    body {
+      font-family: 'Noto Sans KR', sans-serif;
+      background-color: #f3eee2;
+      color: #222;
+      margin: 0;
+      padding: 40px;
+    }
+    .container {
+        width: 80%;
+        max-width: 960px;
+        margin: 0 auto 300px;
+    }
+    .complete-icon {
+      text-align: center;
+      margin:100px 0px 30px;
+    }
+    .complete-icon img {
+      width: 150px;
+      height: auto;
+      margin-bottom: 20px;
+    }
+    .complete-icon p {
+      margin-top: 20px;
+      font-size: 32px;
+      font-weight:500;
+    }
+    .section {
+      margin-top: 180px;
+    }
+    .section-title {
+      padding-bottom: 8px;
+      font-size: 24px;
+      margin-left: 10px;
+    }
+    hr {
+        margin-bottom: 20px;
+    }
+    .order-item {
+        justify-content: space-between;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 20px;
+    }
+    .order-item img {
+      width: 150px;
+      height: auto;
+      object-fit: cover;
+      border-radius: 4px;
+    }
+    .order-details{
+        width: 250px;
+    }
+    .order-details strong {
+      display: block;
+      margin-bottom: 20px;
+      font-size: 18px;
+    }
+    .savings {
+        width : 60px;
+    }
+    .price {
+        width: 90px
+    }
+    .order-summary {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .info-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+    }
+    td {
+      padding: 15px 0;
+      vertical-align: top;
+    }
+    .info-table, .summary-table{
+        margin-left: 15px;
+    }
+    .info-table td:first-child, .summary-table td:first-child {
+      width: 200px;
+    }
+    .summary-table td:last-child {
+      text-align: right;
+    }
+    .label {
+        margin-right: 100px;
+    }

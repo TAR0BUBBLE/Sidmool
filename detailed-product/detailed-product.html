@@ -27,8 +27,7 @@
                 </div>
                 
                 <hr>
-
-                <div class="product-detail">
+                <div class="product-detail" id="label_price">
                     <div class="row">
                         <span class="label">가격</span>
                         <span><del>17,600원</del> <strong class="sale-price">13,600원</strong></span>
@@ -59,28 +58,28 @@
 
                 <hr>
 
-                <p class="all-price">총 상품금액: <strong>26,000원</strong>
+                <p class="all-price">총 상품금액<strong>26,000원</strong>
                 </p>
 
 
                 <div class="buttons">
-                    <button class="cart">장바구니</button>
-                    <button class="buy">바로 구매</button>
+                    <button class="cart"><a href="/Cart/Cart.html">장바구니</a></button>
+                    <button class="buy"><a href="/order/order.html">바로 구매</a></button>
                 </div>
             </div>
         </div>
 
         <!-- 탭 메뉴 -->
         <div class="tab-menu">
-            <span class="tab active">상세 정보</span>
-            <span class="tab">상품 후기</span>
-            <span class="tab">배송 정보</span>
-            <span class="tab">Q&A</span>
+            <a class="tab" href="#productDetailPage">상세 정보</a>
+            <a class="tab" href="#productReviewPage">상품 후기</a>
+            <a class="tab" href="#productShippingPage">배송 정보</a>
+            <a class="tab" href="#productQnaPage">Q&A</a>
         </div>
 
         <!-- 상세 정보 영역 -->
         <div class="product-detail-section">
-            <h3 class="productSectionTitle">상세 정보</h3>
+            <h3 class="productSectionTitle" id="productDetailPage">상세 정보</h3>
             <hr>
 
             <div class="info-row">
@@ -214,7 +213,7 @@
 
         <!-- 상품 후기 영역 -->
         <div class="product-review-section">
-            <h3 class="productSectionTitle">상품 후기</h3>
+            <h3 class="productSectionTitle" id="productReviewPage">상품 후기</h3>
             <hr>
 
             <div class="review-summary">
@@ -266,28 +265,48 @@
 
                 <!-- 필터와 검색 -->
                 <div class="review-filter">
-                    <span><strong>리뷰</strong> 100</span>
+                    <span><strong>리뷰</strong> 25</span>
                     <div class="review-filter-box">
                         <label><input type="checkbox"> 포토/동영상 리뷰만 모아보기</label>
-                        <select class="recomend"><option>추천순</option></select>
+                        <select class="recomend">
+                            <option>추천순</option>
+                            <option>최근순</option>
+                        </select>
                         <input type="text" placeholder="리뷰 키워드 검색">
                     </div>
                 </div>
 
                 <div class="review-filter-select">
-                    <select><option>별점</option></select>
-                    <select><option>피부 고민</option></select>
-                    <select><option>피부타입</option></select>
+                    <select name="star-score">
+                        <option disabled selected hidden>별점</option>
+                        <option>5점</option>
+                        <option>4점</option>
+                        <option>3점</option>
+                        <option>2점</option>
+                        <option>1점</option>
+                    </select>
+                    <select name="skin-concern" id="skinConcernSelect">
+                        <option value="">피부 고민</option>
+                        <option value="여드름">여드름</option>
+                        <option value="아토피">아토피</option>
+                        <option value="탄력">탄력</option>
+                    </select>
+                    <select name="skin-type">
+                        <option >피부타입</option>
+                        <option>건조</option>
+                        <option>지성</option>
+                        <option>복합성</option>
+                    </select>
                 </div>
 
                 <!-- 실제 리뷰 -->
                 <div class="review-list">
-                    <div class="review-item">
-                        <p><span class="star">★★★★★</span><strong>피부 고민</strong> 건조 &nbsp;&nbsp; <strong>피부 타입</strong> 복합성</p>
+                    <div class="review-item" data-skin-concern="여드름">
+                        <p><span class="star">★★★★★</span><strong>피부 고민</strong> 여드름 &nbsp;&nbsp; <strong>피부 타입</strong> 건성</p>
                         <div class="review-main">
                             <div class="review-nameDate">
                                 <span class="review-name">name</span>
-                                <span class="review-date">2025-05-12</span>                            
+                                <span class="review-date">2025-05-09</span>                            
                             </div>
                             <p class="review-content">대박 좋아요 ~!</p>
                         </div>
@@ -297,7 +316,7 @@
                         </div>
                     </div>
 
-                    <div class="review-item">
+                    <div class="review-item" data-skin-concern="탄력">
                         <p><span class="star">★★★★☆</span><strong>피부 고민</strong> 탄력 &nbsp;&nbsp; <strong>피부 타입</strong> 지성</p>
                         <div class="review-main">
                             <div class="review-nameDate">
@@ -312,6 +331,21 @@
                             <button class="report-btn">신고/차단하기</button>
                         </div>
                     </div>
+
+                    <div class="review-item" data-skin-concern="아토피">
+                        <p><span class="star">★★★★★</span><strong>피부 고민</strong> 아토피 &nbsp;&nbsp; <strong>피부 타입</strong> 건성</p>
+                        <div class="review-main">
+                            <div class="review-nameDate">
+                                <span class="review-name">name</span>
+                                <span class="review-date">2025-05-16</span>                            
+                            </div>
+                            <p class="review-content">마음에 들어요! 매일 사용 중이에요.</p>
+                        </div>
+                        <div class="report">
+                            <img src="images/report.png" alt="신고/차단하기">
+                            <button class="report-btn">신고/차단하기</button>
+                        </div>
+                    </div>
                 </div>
             </div>
     
@@ -319,7 +353,7 @@
         
         <!-- 배송 안내 영역 -->
         <div class="shipping-info">
-            <h3 class="productSectionTitle">배송 안내</h3>
+            <h3 class="productSectionTitle" id="productShippingPage">배송 안내</h3>
             <hr>
             <div class="shipping-row">
                 <div class="label">배송업체</div>
@@ -357,7 +391,7 @@
             <h3 class="productSectionTitle">반품/교환 안내</h3>
             <hr>
             <div class="return-row">
-                <div class="label">반품/교환 택배비</div>
+                <div class="label">반품/교환<br>택배비</div>
                 <div class="content">
                 단순 변심에 의한 반품 및 교환인 경우 배송비<br>
                 ▪ 무료배송 <strong>5,000원</strong><br>
@@ -387,36 +421,36 @@
         <hr>
 
         <div class="product-qna-section">
-            <h3 class="productSectionTitle">Q&amp;A</h3>
+            <h3 class="productSectionTitle" id="productQnaPage">Q&amp;A</h3>
             <hr>
 
             <div class="qna-item">
                 <div class="qna-meta">
-                <button class="answered">답변 완료</button>
-                <span class="user">eunsong415</span>
-                <span class="date">2025-5-12</span>
+                    <button class="answered">답변 완료</button>
+                    <span class="user">eunsong415</span>
+                    <span class="date">2025-5-12</span>
                 </div>
                 <div class="qna-content secret">
-                <span class="lock-icon">🔒</span> 비밀글입니다.
+                    <span class="lock-icon">🔒</span> 비밀글입니다.
                 </div>
             </div>
 
             <div class="qna-item">
                 <div class="qna-meta">
-                <button class="pending">답변 전</button>
-                <span class="user">giddonge1030</span>
-                <span class="date">2025-5-12</span>
+                    <button class="pending">답변 전</button>
+                    <span class="user">giddonge1030</span>
+                    <span class="date">2025-5-12</span>
                 </div>
                 <div class="qna-content secret">
-                <span class="lock-icon">🔒</span> 비밀글입니다.
+                    <span class="lock-icon">🔒</span> 비밀글입니다.
                 </div>
             </div>
 
             <div class="qna-item">
                 <div class="qna-meta">
-                <button class="pending">답변 전</button>
-                <span class="user">yoonyoonkawaiiii</span>
-                <span class="date">2025-5-12</span>
+                    <button class="pending">답변 전</button>
+                    <span class="user">yoonyoonkawaiiii</span>
+                    <span class="date">2025-5-12</span>
                 </div>
                 <div class="qna-content">
                 클렌징 잘 지워지나요?
@@ -427,6 +461,23 @@
 
     <div id="footer-placeholder"></div>
 </body>
+
+<script>
+  const select = document.getElementById('skinConcernSelect');
+  const reviews = document.querySelectorAll('.review-item');
+
+  select.addEventListener('change', () => {
+    const concern = select.value;  // "" or "여드름" etc.
+    reviews.forEach(item => {
+      // data-skin-concern 값과 선택값이 같거나, 전체보기("")일 때만 보이도록
+      if (!concern || item.dataset.skinConcern === concern) {
+        item.style.display = 'block';
+      } else {
+        item.style.display = 'none';
+      }
+    });
+  });
+</script>
 
 <script type="module">
     const holder = document.getElementById('header-placeholder');
