@@ -129,8 +129,14 @@ body {
 }
 
 .form-row textarea {
+  /* width: 880px; */
   height: 140px;
   margin-left: 80px;
+}
+
+.request-message-row textarea {
+  height: 140px;
+  margin-left: 30px;
 }
 
 .form-row.phone-row input[type="text"] {
@@ -140,7 +146,7 @@ body {
 }
 
 .phone-prefix {
-  margin-left: 10px;
+  margin-left: 20px;
   font-weight: 700;
   font-size: 14px;
   color: #000;
@@ -154,11 +160,16 @@ body {
 }
 
 .address-row {
-  gap: 12px;
+  gap: 20px;
 }
 
+.name-row {
+  gap: 28px;
+}
+
+
 #address2 {
-  margin-left: 20px;
+  margin-left: 29px;
 }
 
 .address-row input[type="text"] {
@@ -383,7 +394,7 @@ body {
   font-weight: 700;
   font-size: 18px;
   margin: 10px 0 22px;
-  border-top: 2px solid #1e1e1e;
+  border-top: 1px solid #474646;
   padding-top: 12px;
 }
 
