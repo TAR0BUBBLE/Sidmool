@@ -75,9 +75,9 @@ body {
 }
 
 .mypage-nav a:hover {
-  color: #3b7205;
+  color: #000;
   font-weight: bold;
-  border-bottom: 2px solid #3b7205; /* 호버 시 밑줄 효과 */
+  border-bottom: 2px solid #000000; /* 호버 시 밑줄 효과 */
 }
 
 /* 반응형 (옵션) */
@@ -123,7 +123,7 @@ body {
 }
 
 .member-box {
-  background: #fff;
+  background: rgba(255,255,255,0.5);
   border: 1px solid #ccc;
   padding: 20px;
   text-align: left;
@@ -131,12 +131,16 @@ body {
 }
 
 .member-box h2 {
-  font-size: 18px;
+  font-size: 25px;
   margin-bottom: 10px;
 }
 
+.member-box h2 span{
+  font-size: 20px;
+}
+
 .member-box p {
-  font-size: 13px;
+  font-size: 16px;
   margin-bottom: 20px;
   color: #555;
 }
@@ -179,18 +183,20 @@ body {
 
 .member-box button {
   margin-top: 15px;
-  width: 100%;
-  background: #cbe3b2;
+  width: 240px;
+  height: 48px;
+  background: #cbe369;
   color: #333;
   font-weight: 500;
-  border: 1px solid #1e1e1e;
+  font-size: 18px;
+  border: 1.5px solid #1e1e1e;
   padding: 10px;
   cursor: pointer;
   border-radius: 4px;
 }
 
 .member-box button:hover {
-  background: #def7c2;
+  background: #a8c94c;
 }
 
 /*---------------------- 오른쪽 - 주문 정보--------------------------*/
@@ -201,7 +207,7 @@ body {
 
 .infos {
   flex: 2;
-  background: #fff;
+  background: rgba(255,255,255,0.5);
   border: 1px solid #ccc;
   padding: 20px;
   margin-bottom: 100px !important;
@@ -216,7 +222,7 @@ body {
 }
 
 .infos-header h2 {
-  font-size: 16px;
+  font-size: 18px;
 }
 
 .infos-header a {
@@ -294,4 +300,8 @@ body {
 .product-item .discount {
   color: #d67224;
   font-size: 14px;
+}
+
+#price-row {
+  margin-top: 30px;
 }

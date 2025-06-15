@@ -67,7 +67,7 @@ body {
 
 /* ------------배송 정보------------- */
 .shipping-info {
-  background-color: #f9f7f1;
+  background-color: rgba(255,255,255,0.5);
   padding: 24px 32px;
   border-radius: 6px;
   font-size: 14px;
@@ -108,8 +108,7 @@ body {
 .form-row {
   display: flex;
   align-items: center;
-  border-bottom: 1px solid #2b2b2b;
-  padding: 16px 0;
+  padding: 20px 0;
 }
 
 .form-row label {
@@ -158,6 +157,10 @@ body {
   gap: 12px;
 }
 
+#address2 {
+  margin-left: 20px;
+}
+
 .address-row input[type="text"] {
   width: 70%;
   margin-left: 0;
@@ -181,7 +184,7 @@ body {
 
 /* ------------------주문 내역---------------------- */
 .order-list {
-  background-color: #f9f7f0;
+  background-color: rgba(255,255,255,0.5);
   padding: 32px;
   border-radius: 6px;
   margin-top: 60px; /* 배송정보와 간격 */
@@ -291,7 +294,7 @@ body {
 
 .payment-method,
 .payment-summary {
-  background: #f9f7f0;
+  background-color: rgba(255,255,255,0.5);
   border-radius: 6px;
   box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
   padding: 28px 32px;
